@@ -1,0 +1,412 @@
+/**
+ * @file 覆盖 Ant Design 部分组件样式
+ * @author lin pengteng
+ * @date 2022-07-11
+ * @lastModifiedBy
+ * @lastModifiedDate
+ */
+
+// 流式布局 - row
+.flex-row-none {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: center;
+}
+.flex-row-auto {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: center;
+}
+
+// 流式布局 - column
+.flex-column-none {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+}
+.flex-column-auto {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+}
+
+// 手势鼠标
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// 文本省略
+.text-ellipsis {
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  &.ant-select-dropdown {
+    .ant-select-tree-node-content-wrapper,
+    .ant-select-dropdown-menu-item {
+      vertical-align: middle;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+// 表格组件
+.ant-table-wrapper {
+  & {
+    .ant-table {
+      &.ant-table-fixed-left table,
+      &.ant-table-fixed-right table {
+        width: -webkit-fit-content;
+        background-color: #ffffff;
+      }
+
+      & > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th,
+      & > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th,
+      &
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-header
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      &
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-body
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-header
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-header
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-body-outer
+        > .ant-table-body-inner
+        > table
+        > .ant-table-thead
+        > tr
+        > th,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-body-outer
+        > .ant-table-body-inner
+        > table
+        > .ant-table-thead
+        > tr
+        > th {
+        background-color: #fafafd;
+      }
+
+      & > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-body-outer
+        > .ant-table-body-inner
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-body-outer
+        > .ant-table-body-inner
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      & > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr > td,
+      &
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-body
+        > table
+        > .ant-table-tbody
+        > tr
+        > td,
+      &
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr
+        > td {
+        background-color: #ffffff;
+      }
+    }
+  }
+  &[striped] {
+    .ant-table {
+      & > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-body-outer
+        > .ant-table-body-inner
+        > table
+        > .ant-table-tbody
+        > tr,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-left
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-body-outer
+        > .ant-table-body-inner
+        > table
+        > .ant-table-tbody
+        > tr,
+      &
+        > .ant-table-content
+        > .ant-table-fixed-right
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr,
+      & > .ant-table-content > .ant-table-header > table > .ant-table-tbody > tr,
+      & > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr,
+      &
+        > .ant-table-content
+        > .ant-table-scroll
+        > .ant-table-header
+        > table
+        > .ant-table-tbody
+        > tr {
+        &:nth-child(odd) > td:not([rowspan]) {
+          background-color: #ffffff;
+        }
+        &:nth-child(even) > td:not([rowspan]) {
+          background-color: #fafafd;
+        }
+      }
+    }
+  }
+}
+
+// 抽屉框组件
+.ant-drawer {
+  .no-transform & {
+    &.ant-drawer-right.ant-drawer-open {
+      transform: translateX(0) !important;
+    }
+  }
+  .ant-drawer-header {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 55px;
+  }
+  .ant-drawer-body {
+    width: 100%;
+    padding: 80px 24px 16px;
+  }
+  .drawer-footer {
+    width: 100%;
+    height: 55px;
+    .footer-fixed {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 55px;
+      padding: 10px 16px;
+      text-align: right;
+      border-top: 1px solid #e9e9e9;
+      background: #fff;
+      .ant-btn + .ant-btn {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+// 表单组件
+.ant-form {
+  &.ant-form-inline,
+  &.ant-form-vertical,
+  &.ant-form-horizontal {
+    .ant-form-item {
+      width: 100%;
+      display: flex;
+      margin-bottom: 16px;
+      & > .ant-form-item-label {
+        width: auto;
+        flex: 0 0 auto;
+        color: #30323c;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        display: inline-block;
+      }
+      & > .ant-form-item-control-wrapper {
+        width: 100%;
+        flex: 1 1 auto;
+        display: inline-block;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .ant-form-item-control {
+          max-width: 100%;
+          .ant-form-item-children {
+            max-width: 100%;
+            .ant-rate {
+              display: block;
+              .ant-rate-star {
+                top: -1px;
+              }
+            }
+            .ant-input-number,
+            .ant-calendar-picker {
+              width: 100%;
+              min-width: 0 !important;
+            }
+            .ant-checkbox-group {
+              width: 100%;
+              white-space: normal;
+              .ant-checkbox-wrapper {
+                margin: 8px 8px 0 0;
+                .ant-checkbox-checked.ant-checkbox-disabled {
+                  .ant-checkbox-inner {
+                    background-color: #f5f5f5;
+                  }
+                }
+              }
+            }
+            .ant-radio-group {
+              width: 100%;
+              white-space: normal;
+              .ant-radio-wrapper {
+                margin: 8px 8px 0 0;
+                .ant-radio-checked.ant-radio-disabled {
+                  .ant-radio-inner {
+                    background-color: #f5f5f5;
+                  }
+                }
+              }
+            }
+          }
+          .ant-form-explain,
+          .ant-form-extra {
+            height: 18px;
+            min-height: 18px;
+            margin: -2px 0 0;
+            font-size: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  &.ant-form-inline {
+    .ant-form-item {
+      display: flex;
+      margin-bottom: 16px;
+      & > .ant-form-item-label {
+        width: auto;
+        flex: 0 0 auto;
+      }
+      &.ant-form-item-with-help {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.ant-form-horizontal {
+    .ant-form-item {
+      display: flex;
+      margin-bottom: 16px;
+      & > .ant-form-item-label {
+        width: 80px;
+      }
+      &.ant-form-item-with-help {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.ant-form-vertical {
+    .ant-form-item {
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: 16px;
+      & > .ant-form-item-label {
+        width: 100%;
+      }
+      &.ant-form-item-with-help {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.ant-form-inline[labelWidthAuto],
+  &.ant-form-inline[label-width-auto],
+  &.ant-form-vertical[labelWidthAuto],
+  &.ant-form-vertical[label-width-auto],
+  &.ant-form-horizontal[labelWidthAuto],
+  &.ant-form-horizontal[label-width-auto] {
+    .ant-form-item {
+      & > .ant-form-item-label {
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/**
+ * @file 定义 CSS变量
+ * @description CSS变量 不兼容 IE
+ * @author lin pengteng
+ * @date 2022-07-11
+ * @lastModifiedBy
+ * @lastModifiedDate
+ */
+
+@import '~ant-design-vue/es/style/themes/default.less';
+
+// 布局
+:root {
+  // layout-sider-width
+  --layout-sider-min-width: 180px;
+  --layout-sider-max-width: 240px;
+  --layout-sider-collapsed-min-width: 48px;
+  --layout-sider-collapsed-max-width: 64px;
+
+  // layout-header-height
+  --layout-header-min-height: 48px;
+  --layout-header-max-height: 64px;
+
+  // layout-defalt
+  --layout-sider-width: var(--layout-sider-max-width);
+  --layout-sider-collapsed-width: var(--layout-sider-collapsed-max-width);
+  --layout-header-height: var(--layout-header-max-height);
+}
+
+// 媒体
+#app.screen-xs,
+#app.screen-sm,
+#app.screen-md {
+  // layout-defalt
+  --layout-sider-width: var(--layout-sider-min-width);
+  --layout-sider-collapsed-width: var(--layout-sider-collapsed-min-width);
+  --layout-header-height: var(--layout-header-min-height);
+}
+
+// 变量
+:root {
+  --text-color: @text-color;
+  --link-color: @link-color;
+  --error-color: @error-color;
+  --primary-color: @primary-color;
+  --success-color: @success-color;
+  --warning-color: @warning-color;
+  --heading-color: @heading-color;
+  --disabled-color: @disabled-color;
+  --text-color-secondary: @text-color-secondary;
+
+  --border-radius-base: @border-radius-base;
+  --border-color-base: @border-color-base;
+  --box-shadow-base: @box-shadow-base;
+  --font-size-base: @font-size-base;
+}

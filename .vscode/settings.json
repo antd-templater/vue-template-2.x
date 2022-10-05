@@ -1,0 +1,113 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[stylus]": {
+    "editor.defaultFormatter": "thisismanta.stylus-supremacy"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "files.exclude": {
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.classpath": true,
+    "**/.factorypath": true
+  },
+  "eslint.format.enable": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript",
+    "html",
+    "vue"
+  ],
+  "prettier.semi": false,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.bracketSameLine": false,
+  "prettier.jsxSingleQuote": false,
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.quoteProps": "consistent",
+  "prettier.arrowParens": "avoid",
+  "prettier.trailingComma": "es5",
+  "stylusSupremacy.insertColons": true,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertNewLineAroundImports": false,
+  "stylusSupremacy.insertNewLineAroundBlocks": false,
+  "vetur.format.enable": true,
+  "vetur.validation.style": true,
+  "vetur.validation.script": true,
+  "vetur.validation.template": false,
+  "vetur.format.options.tabSize": 2,
+  "vetur.format.options.useTabs": false,
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.defaultFormatter.postcss": "prettier",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": false,
+      "useTabs": false,
+      "tabWidth": 2,
+      "printWidth": 100,
+      "singleQuote": true,
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "jsxSingleQuote": false,
+      "vueIndentScriptAndStyle": false,
+      "htmlWhitespaceSensitivity": "ignore",
+      "quoteProps": "consistent",
+      "arrowParens": "avoid",
+      "trailingComma": "es5"
+    },
+    "prettyhtml": {
+      "tabWidth": 2,
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": true,
+      "sortAttributes": false,
+      "usePrettier": true,
+      "useTabs": false
+    }
+  }
+}
