@@ -102,7 +102,7 @@
         <a href="_self">隐私</a>
         <a href="_self">条款</a>
       </div>
-      <div class="copyright">Copyright &copy; 2020 Ant-Templater</div>
+      <div class="copyright">Copyright &copy; 2022 Antd-Templater</div>
     </div>
   </section>
 </template>
