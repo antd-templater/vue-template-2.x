@@ -1,5 +1,5 @@
 {
-  "name": "@antd-templater/dev-template-vue2.x",
+  "name": "@antd-templater/antd-template-vue2.x",
   "description": "PC端管理类系统 - 基于 Vue2.x Ant Design Vue 组件库",
   "version": "1.0.0",
   "scripts": {
