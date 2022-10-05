@@ -1723,7 +1723,7 @@ export default {
 
 <style lang="less" scoped>
 .base-tree-container {
-  width: calc(100% - 48px);
+  width: 100%;
   height: calc(100% - 48px);
   position: absolute;
   top: 24px;

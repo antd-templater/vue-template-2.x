@@ -109,7 +109,7 @@ export default {
 .section-container {
   display: flex;
   flex-flow: column nowrap;
-  width: calc(100% - 48px);
+  width: 100%;
   height: calc(100% - 36px);
   padding: 24px 24px 12px;
   position: absolute;
