@@ -1,6 +1,8 @@
 {
   "name": "@antd-templater/antd-template-vue2.x",
   "description": "PC端管理类系统 - 基于 Vue2.x Ant Design Vue 组件库",
+  "homepage": "https://github.com/antd-templater/antd-template-vue2.x",
+  "author": "lin pengteng <china.linpengteng@gmail.com>",
   "version": "1.0.0",
   "scripts": {
     "dev": "vue-cli-service serve",
