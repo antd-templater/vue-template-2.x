@@ -26,7 +26,7 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         doneTag: false,
         id: '11442970747734161',
         idCard: '330206199901011111',
-        mobilePhone: '18258888888',
+        mobilePhone: '182588xxx88',
         modifyBy: 'admin',
         modifyDate: 1642075661198,
         orgId: '101.100.131',
@@ -34,11 +34,11 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         pageTag: false,
         password: '12345678',
         personName: 'admin',
-        personNum: '18258888888',
+        personNum: '182588xxx88',
         personSysId: '11442970747734160',
         postName: '系统管理',
         todoTag: false,
-        userNo: '18258888888'
+        userNo: '182588xxx88'
       },
       {
         activity: 'Y',
@@ -50,7 +50,7 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         doneTag: false,
         id: '27442970747734162',
         idCard: '330204198603281111',
-        mobilePhone: '18258888888',
+        mobilePhone: '182588xxx88',
         modifyBy: 'admin',
         modifyDate: 1642073951575,
         orgId: '101.100.131',
@@ -58,11 +58,11 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         pageTag: false,
         password: '12345678',
         personName: '林某',
-        personNum: '18258888888',
+        personNum: '182588xxx88',
         personSysId: '26632627540721721',
         postName: '系统管理',
         todoTag: false,
-        userNo: '18258888888'
+        userNo: '182588xxx88'
       }
     ],
     pageNo: 1,

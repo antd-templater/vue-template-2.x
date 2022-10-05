@@ -22,7 +22,7 @@ Mock.mock(Utils.toRegex(api.getRoleInfoByPages), 'post', options => {
         createDate: 1642073583031,
         dataFlag: '2',
         doneTag: false,
-        modifyBy: '18258888888',
+        modifyBy: '182588xxx88',
         modifyDate: 1642337965893,
         orgId: '101.100.131',
         pageTag: false,

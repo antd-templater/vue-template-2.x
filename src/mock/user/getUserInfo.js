@@ -20,7 +20,7 @@ Mock.mock(Utils.toRegex(api.getUserInfo), 'post', options => {
     departmentName: '软件部',
     departmentSysId: '1126534161135795132',
     id: '11442970747734161',
-    mobilePhone: '18258888888',
+    mobilePhone: '182588xxx88',
     orgId: '101.100.131',
     orgName: '北仑网安通信有限公司',
     personName: 'admin',
