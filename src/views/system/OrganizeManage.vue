@@ -231,7 +231,7 @@ export default {
     display: flex;
     flex-flow: column nowrap;
     flex: 1 1 auto;
-    width: calc(100% - 344px);
+    width: calc(100% - 334px);
     height: 100%;
     position: relative;
     .section-query-container {

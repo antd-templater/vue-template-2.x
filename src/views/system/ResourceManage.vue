@@ -128,7 +128,7 @@ export default {
     flex: 0 0 auto;
     display: flex;
     flex-flow: column nowrap;
-    width: calc(100% - 344px);
+    width: calc(100% - 334px);
     height: 100%;
     & > .section-right-top-container {
       width: 100%;
