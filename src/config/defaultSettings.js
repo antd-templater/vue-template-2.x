@@ -18,7 +18,7 @@
  * @attribute storageOptions: 插件配置项
  */
 export default {
-  title: 'Ant Template',
+  title: 'Antd Template',
   colorWeak: false,
   primaryColor: '#1890FF',
   navTheme: 'light',
