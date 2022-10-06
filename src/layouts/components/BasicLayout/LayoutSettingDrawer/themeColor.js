@@ -31,7 +31,7 @@ export default {
     return client.changer.changeColor(
       {
         changeUrl (cssUrl) {
-          return `/${cssUrl}`
+          return `${cssUrl}`
         },
         newColors: this.getAntdSerials(newColor)
       },
