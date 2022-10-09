@@ -12,7 +12,7 @@
             <span>系统平台</span>
           </div>
           <div class="description">
-            <span>基于 Ant Disign Vue 框架搭建</span>
+            <span>基于 Ant Design Vue 框架搭建</span>
           </div>
         </div>
 
