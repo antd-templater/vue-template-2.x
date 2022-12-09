@@ -1,6 +1,6 @@
 <template>
   <section class="tree-drawer-form-container">
-    <base-form
+    <s-form
       ref="form"
       :grid="grid"
       :watch="watch"
@@ -13,14 +13,14 @@
     >
       <template #icon="{ field, label, decorator, binds, events }">
         <a-form-item :label="label">
-          <base-icon-select
+          <s-icon-select
             v-decorator="[field, decorator]"
             v-bind="binds"
             v-on="events"
           />
         </a-form-item>
       </template>
-    </base-form>
+    </s-form>
   </section>
 </template>
 

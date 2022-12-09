@@ -1,6 +1,6 @@
 <template>
   <section class="user-table-container">
-    <base-table
+    <s-table
       ref="table"
       :data="loadData"
       :scroll="scroll"
@@ -16,23 +16,23 @@
       striped
     >
       <template #orgId="key">
-        <base-ellipsis
+        <s-ellipsis
           :tooltip="true"
           :sheared="false"
           :length="16"
         >
           {{ takeLabelByKey(queryOptions.orgTree, key, ['shortName', 'label']) }}
-        </base-ellipsis>
+        </s-ellipsis>
       </template>
 
       <template #departmentSysId="key">
-        <base-ellipsis
+        <s-ellipsis
           :tooltip="true"
           :sheared="false"
           :length="16"
         >
           {{ takeLabelByKey(queryOptions.departmentSysId, key) }}
-        </base-ellipsis>
+        </s-ellipsis>
       </template>
 
       <template #activity="value, record">
@@ -58,7 +58,7 @@
           修改
         </a>
       </template>
-    </base-table>
+    </s-table>
 
     <!-- 角色抽屉框 -->
     <user-drawer

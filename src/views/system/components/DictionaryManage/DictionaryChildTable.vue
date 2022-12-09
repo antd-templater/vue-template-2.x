@@ -1,6 +1,6 @@
 <template>
   <section class="dictionary-child-table-container">
-    <base-table
+    <s-table
       ref="table"
       :data="loadData"
       :scroll="scroll"
@@ -34,7 +34,7 @@
           修改
         </a>
       </template>
-    </base-table>
+    </s-table>
 
     <!-- 代码抽屉框 -->
     <dictionary-child-drawer

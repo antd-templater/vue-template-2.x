@@ -4,9 +4,6 @@ import api from '@/api/person'
 
 /**
  * @descrption 模拟接口 - 新增员工信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.addPersonInfo), 'post', options => {
   // 接口参数

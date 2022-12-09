@@ -4,9 +4,6 @@ import defaultRouter from './router.constant'
 
 /**
  * @description Router 实例
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.use(Router)
 

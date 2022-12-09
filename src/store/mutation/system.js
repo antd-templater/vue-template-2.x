@@ -1,9 +1,5 @@
 /**
  * @description 操作类型
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export const TOGGLE_WEAK = 'TOGGLE_WEAK'
 export const TOGGLE_COLOR = 'TOGGLE_COLOR'
@@ -22,10 +18,6 @@ export const TOGGLE_MOBILE_TYPE = 'TOGGLE_MOBILE_TYPE'
 
 /**
  * @description 布局类型
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export const CONTENT_WIDTH_TYPES = {
   Fluid: 'Fluid',
@@ -34,10 +26,6 @@ export const CONTENT_WIDTH_TYPES = {
 
 /**
  * @description 主题类型
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export const NAV_THEME_TYPES = {
   DARK: 'dark',

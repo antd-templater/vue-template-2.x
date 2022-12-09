@@ -7,7 +7,7 @@
     <title>Antd Template</title>
 
     <!-- require icon -->
-    <% if (VUE_APP_BASE_URL === '/') { %>
+    <% if (VUE_APP_BASE_URL.endsWith('/')) { %>
     <link rel="icon" href="<%= VUE_APP_BASE_URL %>logo.png" />
     <% } else { %>
     <link rel="icon" href="<%= VUE_APP_BASE_URL %>/logo.png" />

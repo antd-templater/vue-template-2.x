@@ -1,6 +1,6 @@
 <template>
   <section class="role-table-container">
-    <base-table
+    <s-table
       ref="table"
       :data="loadData"
       :scroll="scroll"
@@ -16,7 +16,7 @@
       striped
     >
       <template #EditCellInput="text, record, index, column">
-        <base-edit-cell-input
+        <s-edit-cell-input
           :text="text"
           :cellStyle="cellStyle"
           :status.sync="cellStatus"
@@ -26,7 +26,7 @@
       </template>
 
       <template #EditCellSelect="text, record, index, column">
-        <base-edit-cell-select
+        <s-edit-cell-select
           :text="text"
           :cellStyle="cellStyle"
           :status.sync="cellStatus"
@@ -66,7 +66,7 @@
           删除
         </a>
       </template>
-    </base-table>
+    </s-table>
 
     <!-- 角色抽屉框 -->
     <role-drawer

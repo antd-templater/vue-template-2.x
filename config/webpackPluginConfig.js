@@ -62,7 +62,8 @@ const themePluginOption = {
  * @description webpack更换主题色
  * @return {ThemeColorReplacer}
  */
-const createThemeColorReplacerPlugin = () =>
-  new ThemeColorReplacer(themePluginOption)
+const createThemeColorReplacerPlugin = () => {
+  return new ThemeColorReplacer(themePluginOption)
+}
 
 module.exports = createThemeColorReplacerPlugin

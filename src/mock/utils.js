@@ -1,8 +1,5 @@
 /**
  * @description 接口路径解析
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {String} string
  * @return {String}
@@ -15,9 +12,6 @@ export const toRegex = string => {
 
 /**
  * @description 获取 body 参数
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {JsonString} options
  * @return {Object}
@@ -28,9 +22,6 @@ export const getBody = options => {
 
 /**
  * @description 获取 url param 参数
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {UrlParams} options
  * @return {Object}
@@ -53,9 +44,6 @@ export const getParam = options => {
 
 /**
  * @description 返回响应数据
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Any} result
  * @param {String} message
@@ -72,9 +60,6 @@ export const builder = (result, message = '', code = '0000') => {
 
 /**
  * @description 默认导出如下方法
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   toRegex,

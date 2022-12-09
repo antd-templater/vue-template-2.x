@@ -4,9 +4,6 @@ import api from '@/api/base'
 
 /**
  * @descrption 模拟接口 - 查询 Option 下拉框
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.getOptionById), 'post', options => {
   // 接口参数

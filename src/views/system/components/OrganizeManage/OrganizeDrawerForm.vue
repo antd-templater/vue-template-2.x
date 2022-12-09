@@ -1,6 +1,6 @@
 <template>
   <section class="organize-drawer-form-container">
-    <base-form
+    <s-form
       ref="form"
       :grid="grid"
       :watch="watch"
@@ -241,7 +241,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-:deep(.base-form-container) {
+:deep(.s-form-container) {
   .ant-form.ant-form-horizontal {
     .ant-form-item > .ant-form-item-label {
       width: 54px;

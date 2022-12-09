@@ -19,9 +19,6 @@ const DEFUALT_AVATAR = require('@/assets/avatar/default_avatar.png')
 
 /**
  * @description 用户信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   state: {

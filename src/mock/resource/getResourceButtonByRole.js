@@ -4,9 +4,6 @@ import api from '@/api/resource'
 
 /**
  * @descrption 模拟接口 - 根据角色查询按钮资源
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.getResourceButtonByRole), 'post', options => {
   // 接口参数

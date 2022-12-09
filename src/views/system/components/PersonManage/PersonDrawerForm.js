@@ -1,10 +1,7 @@
-import { extender } from '@/components/BaseForm/helper'
+import { extender } from '@antd-templater/antd-template-lib2.x/SForm/Helper'
 
 /**
  * @description 员工管理 - 表单数据
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   data () {
@@ -221,7 +218,7 @@ export default {
           // 所属部门
           if (group.field === 'departmentSysId') {
             Object.assign(option, {
-              selectOptionsRender (options, { Utils, form }) {
+              selectOptionsRender (options, { Util, form }) {
                 return options.filter(opt => {
                   const orgId = form.getFieldValue('orgId')
                   return orgId && opt.parentId === orgId

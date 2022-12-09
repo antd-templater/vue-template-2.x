@@ -31,7 +31,7 @@
               overflow: 'hidden',
             }"
           >
-            <base-tree
+            <s-tree
               ref="tree"
               :loading="loading"
               :treeData="menuTrees"
@@ -48,7 +48,7 @@
               @check="doTreeCheck"
             >
               <template #titleRootButton>
-                <span class="base-tree-title-button always-show">
+                <span class="s-tree-title-button always-show">
                   <a-button
                     ghost
                     slot="extra"
@@ -69,7 +69,7 @@
                   />
                 </span>
               </template>
-            </base-tree>
+            </s-tree>
           </a-card>
         </div>
 

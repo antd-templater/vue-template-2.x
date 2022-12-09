@@ -4,10 +4,6 @@ import { ORG_ID, PERSON_ID, OPERATOR, DATA_FLAG } from '@/store/variable'
 
 /**
  * @description 补齐数值精度
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {String | Number} num
  * @param {String | Number} keep?
@@ -23,10 +19,6 @@ export const takePadEnd = (num, keep = 0) => {
 
 /**
  * @description 处理数值精度
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {String | Number} num
  * @param {String | Number} digit?
@@ -59,10 +51,6 @@ export const takeFixed = (num, digit = 0) => {
 
 /**
  * @description 取出节点数据
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array} tree
  * @param {String | Number} key
@@ -114,10 +102,6 @@ export const takeTreeByKey = (
 
 /**
  * @description 取出节点文本
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array} tree
  * @param {String | Number} key
@@ -163,10 +147,6 @@ export const takeLabelByKey = (
 
 /**
  * @description 根据格式转换 日期
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Date | String | Number} date
  * @param {String} format?
@@ -183,10 +163,6 @@ export const takeTimeToDate = (date, format) => {
 
 /**
  * @description 根据格式转换 时间
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Date | String | Number} date
  * @param {String} format?
@@ -203,10 +179,6 @@ export const takeTimeToFormat = (date, format) => {
 
 /**
  * @description 封装传参格式
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {String} action?
  * @param {Object} param?
@@ -244,8 +216,8 @@ export const requestBuilder = (
   delete param.sortTopOrder
 
   return {
-    param: param,
-    action: action,
+    param,
+    action,
     orgId: Vue.ls.get(ORG_ID),
     personId: Vue.ls.get(PERSON_ID),
     operator: Vue.ls.get(OPERATOR),
@@ -261,10 +233,6 @@ export const requestBuilder = (
 
 /**
  * @description 递归更新属性值
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array} array
  * @return {Array | Object}

@@ -4,9 +4,6 @@ import * as userApi from '@/api/user'
 
 /**
  * @description 转换树形结构
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array <router>} list
  * @param {Array <router>} tree
@@ -18,7 +15,7 @@ const listToTree = (list, tree, parent) => {
     if (item.parentId === parent.id) {
       // 创建 route
       const key = item.key || item.name
-      const route = { ...item, key: key, children: [] }
+      const route = { ...item, key, children: [] }
 
       // 迭代 list，找到符合的子菜单
       listToTree(list, route.children, item)
@@ -36,9 +33,6 @@ const listToTree = (list, tree, parent) => {
 
 /**
  * @description 转换层级路由表
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array <router>} routers
  * @param {Object <router>} parent
@@ -73,11 +67,11 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
 
       // 路由meta
       meta: {
-        icon: icon,
-        show: show,
-        match: match,
-        title: title,
-        target: target,
+        icon,
+        show,
+        match,
+        title,
+        target,
         groupId: (parent.meta || {}).groupId || item.id,
         noCache: (parent.meta || {}).noCache === true || noCache === true,
         external: (!isNotIframeView && item.path) || '',
@@ -140,9 +134,6 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
 
 /**
  * @description 动态生成菜单
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Object} params
  * @param {Object <component>} components
@@ -178,9 +169,6 @@ export const generatorDynamicRouter = ({ params, components }) => {
 
 /**
  * @description 动态生成路由路径
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Object <router>} parent
  * @param {Object <router>} item
@@ -199,9 +187,6 @@ export const generatorDynamicPath = (parent = {}, item = {}) => {
 
 /**
  * @description 动态加载路由对应页面的组件
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Object <router>} parent
  * @param {Object <router>} item
@@ -244,9 +229,6 @@ export const loadDynamicComponent = (
 
 /**
  * @description 布局页面路由生成器
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array <context>} contexts
  * @return {Map <string, component>}
@@ -265,9 +247,6 @@ export const generatorLayoutRouter = (...contexts) => {
 
 /**
  * @description 业务页面路由生成器
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {Array <context>} contexts
  * @return {Map <string, component>}

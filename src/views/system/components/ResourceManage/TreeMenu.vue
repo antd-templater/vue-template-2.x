@@ -14,7 +14,7 @@
       }"
       :bordered="false"
     >
-      <base-tree
+      <s-tree
         ref="tree"
         :loading="loading"
         :treeData="menuTree"
@@ -29,7 +29,7 @@
         @select="doLinkage($event)"
       >
         <template #titleRootButton="item">
-          <span class="base-tree-title-button">
+          <span class="s-tree-title-button">
             <a-button
               slot="extra"
               type="link"
@@ -56,7 +56,7 @@
         </template>
 
         <template #titleChildButton="item">
-          <span class="base-tree-title-button">
+          <span class="s-tree-title-button">
             <a-button
               slot="extra"
               type="link"
@@ -81,7 +81,7 @@
             />
           </span>
         </template>
-      </base-tree>
+      </s-tree>
     </a-card>
 
     <tree-drawer

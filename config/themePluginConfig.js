@@ -1,9 +1,5 @@
 /**
  * @description 主题风格系列
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   theme: [

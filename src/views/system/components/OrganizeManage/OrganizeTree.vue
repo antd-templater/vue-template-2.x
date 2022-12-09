@@ -40,7 +40,7 @@
         />
       </template>
 
-      <base-tree
+      <s-tree
         ref="tree"
         :loading="loading"
         :loadData="doQuery"
@@ -62,7 +62,7 @@
           v-if="false"
           #titleRootButton="item"
         >
-          <span class="base-tree-title-button">
+          <span class="s-tree-title-button">
             <a-button
               slot="extra"
               type="link"
@@ -93,7 +93,7 @@
           v-if="false"
           #titleChildButton="item"
         >
-          <span class="base-tree-title-button">
+          <span class="s-tree-title-button">
             <a-button
               slot="extra"
               type="link"
@@ -118,7 +118,7 @@
             />
           </span>
         </template>
-      </base-tree>
+      </s-tree>
     </a-card>
 
     <organize-drawer

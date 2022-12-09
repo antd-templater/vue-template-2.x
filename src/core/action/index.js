@@ -3,9 +3,6 @@ import store from '@/store/index'
 
 /**
  * @description 权限指令
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.directive('action', {
   inserted: function (el, binding, vnode) {

@@ -4,9 +4,6 @@ import { ORG_ID } from '@/store/variable'
 
 /**
  * @description 基础接口
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @api getOptionById: 查询 Option 下拉框
  * @api getTreeById: 查询 Tree 下拉框

@@ -4,9 +4,6 @@ import api from '@/api/auth'
 
 /**
  * @descrption 模拟接口 - 系统退出
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.logout), 'post', options => {
   // 接口参数

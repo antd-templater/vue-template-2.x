@@ -4,8 +4,5 @@ import defaultSettings from '@/config/defaultSettings'
 
 /**
  * @description storage 配置
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.use(VueStorage, defaultSettings.storageOptions)

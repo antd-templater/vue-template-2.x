@@ -4,9 +4,6 @@ import api from '@/api/resource'
 
 /**
  * @descrption 模拟接口 - 删除资源信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.deleteResourceInfo), 'post', options => {
   // 接口参数

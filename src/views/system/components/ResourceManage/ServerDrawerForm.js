@@ -1,10 +1,7 @@
-import { extender } from '@/components/BaseForm/helper'
+import { extender } from '@antd-templater/antd-template-lib2.x/SForm/Helper'
 
 /**
  * @description 资源管理 - 服务表单数据
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   data () {

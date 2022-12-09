@@ -7,10 +7,6 @@ import { ACCESS_TOKEN } from '@/store/variable'
 
 /**
  * @description Axios 实例
- * @author lin pengteng
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 const axios = Axios.create({
   baseURL: process.env.VUE_APP_BASE_API,

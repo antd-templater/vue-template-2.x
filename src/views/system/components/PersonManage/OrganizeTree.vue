@@ -33,7 +33,7 @@
         />
       </template>
 
-      <base-tree
+      <s-tree
         ref="tree"
         :loading="loading"
         :loadData="doQuery"

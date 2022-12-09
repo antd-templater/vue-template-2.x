@@ -2,9 +2,6 @@ import { axios } from '@/utils/request'
 
 /**
  * @description 员工接口
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @api addPersonInfo: 新增员工信息
  * @api getPersonInfoList: 获取员工列表
@@ -22,7 +19,7 @@ export function addPersonInfo (data) {
   return axios({
     url: api.addPersonInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -30,7 +27,7 @@ export function getPersonInfoList (data) {
   return axios({
     url: api.getPersonInfoList,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -38,7 +35,7 @@ export function modifyPersonInfo (data) {
   return axios({
     url: api.modifyPersonInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -46,7 +43,7 @@ export function deletePersonInfo (data) {
   return axios({
     url: api.deletePersonInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 

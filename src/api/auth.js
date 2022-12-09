@@ -2,9 +2,6 @@ import { axios } from '@/utils/request'
 
 /**
  * @descrption 认证接口
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @api login: 系统登录
  * @api logout: 系统退出
@@ -20,7 +17,7 @@ export function login (data) {
   return axios({
     url: api.login,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -28,7 +25,7 @@ export function logout (data) {
   return axios({
     url: api.logout,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -36,7 +33,7 @@ export function modifyPassword (data) {
   return axios({
     url: api.modifyPassword,
     method: 'post',
-    data: data
+    data
   })
 }
 

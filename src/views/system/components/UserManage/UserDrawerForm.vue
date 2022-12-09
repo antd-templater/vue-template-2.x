@@ -1,6 +1,6 @@
 <template>
   <section class="user-drawer-form-container">
-    <base-form
+    <s-form
       ref="form"
       :grid="grid"
       :watch="watch"
@@ -35,7 +35,7 @@
           />
         </a-form-item>
       </template>
-    </base-form>
+    </s-form>
 
     <person-table-drawer
       ref="personTableDrawer"

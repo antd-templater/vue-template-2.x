@@ -1,8 +1,5 @@
 /**
  * @description 默认配置
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @attribute title - 标题
  * @attribute colorWeak - 色盲模式

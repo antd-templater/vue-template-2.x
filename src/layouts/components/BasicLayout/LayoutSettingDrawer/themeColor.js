@@ -3,9 +3,6 @@ import generate from '@ant-design/colors/lib/generate'
 
 /**
  * @description 主题风格
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   /**
@@ -31,7 +28,9 @@ export default {
     return client.changer.changeColor(
       {
         changeUrl (cssUrl) {
-          return `${cssUrl}`
+          return process.env.VUE_APP_BASE_URL.endsWith('/')
+            ? process.env.VUE_APP_BASE_URL + `${cssUrl}`
+            : process.env.VUE_APP_BASE_URL + `/${cssUrl}`
         },
         newColors: this.getAntdSerials(newColor)
       },

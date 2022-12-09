@@ -4,17 +4,11 @@ import 'ant-design-vue/dist/antd.less'
 
 /**
  * @description 组件库一次性加载
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.use(Antd)
 
 /**
  * @description 注入Vue实例
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.prototype.$message = message
 Vue.prototype.$notification = notification

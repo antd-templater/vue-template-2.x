@@ -1,5 +1,6 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
+import '@antd-templater/antd-template-lib2.x'
 
 import bootstrap from './core'
 import router from './router'
@@ -9,10 +10,9 @@ import Vue from 'vue'
 
 import './main.less'
 import './permission'
-import './register.component'
-
 import './mock/index'
 
+// 实例化
 new Vue({
   router,
   store,
@@ -20,5 +20,5 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-// 消除启动相关消息
+// 消除生产消息
 Vue.config.productionTip = false

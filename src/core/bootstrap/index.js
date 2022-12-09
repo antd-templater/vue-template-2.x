@@ -20,9 +20,6 @@ import {
 
 /**
  * @description 核心初始化
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default function Initializer () {
   store.commit('SET_TOKEN', Vue.ls.get(ACCESS_TOKEN))

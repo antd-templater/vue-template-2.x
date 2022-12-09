@@ -4,9 +4,6 @@ import api from '@/api/role'
 
 /**
  * @descrption 模拟接口 - 修改角色信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.modifyRoleInfo), 'post', options => {
   // 接口参数

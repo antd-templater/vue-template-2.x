@@ -32,7 +32,7 @@
         class="table-container"
         style="height: 100%"
       >
-        <base-table
+        <s-table
           ref="table"
           :data="loadData"
           :scroll="scroll"
@@ -51,7 +51,7 @@
           striped
         >
           <template #EditCellInput="text, record, index, column">
-            <base-edit-cell-input
+            <s-edit-cell-input
               :text="text"
               :cellStyle="cellStyle"
               :status.sync="cellStatus"
@@ -77,7 +77,7 @@
               删除
             </a>
           </template>
-        </base-table>
+        </s-table>
       </div>
     </a-card>
 

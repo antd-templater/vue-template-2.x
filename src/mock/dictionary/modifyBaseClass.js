@@ -4,9 +4,6 @@ import api from '@/api/dictionary'
 
 /**
  * @descrption 模拟接口 - 修改字典类别信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.modifyBaseClass), 'post', options => {
   // 接口参数

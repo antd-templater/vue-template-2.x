@@ -1,10 +1,7 @@
-import { extender } from '@/components/BaseForm/helper'
+import { extender } from '@antd-templater/antd-template-lib2.x/SForm/Helper'
 
 /**
  * @description 资源管理 - 菜单表单数据
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   data () {
@@ -122,16 +119,16 @@ export default {
           unCheckedChildren: '关'
         },
         transfer: {
-          input (value, { Utils }) {
-            if (Utils.isBoolean(value)) {
+          input (value, { Util }) {
+            if (Util.isBoolean(value)) {
               return value
             }
-            if (Utils.isString(value)) {
+            if (Util.isString(value)) {
               return !['Y', 'y'].includes(value)
             }
             return true
           },
-          output (value, { Utils }) {
+          output (value, { Util }) {
             return value !== true ? 'Y' : 'N'
           }
         }

@@ -1,6 +1,3 @@
-const RUN_ENV = process.env.NODE_ENV
-const RUN_PROD = ['production', 'prod'].includes(RUN_ENV)
-
 module.exports = {
   presets: [
     [
@@ -20,7 +17,6 @@ module.exports = {
         libraryDirectory: 'es',
         style: true
       }
-    ],
-    ...(RUN_PROD ? ['transform-remove-console'] : [])
+    ]
   ]
 }

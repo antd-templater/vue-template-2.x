@@ -1,14 +1,13 @@
 const path = require('path')
 const webpack = require('webpack')
-const createThemeColorReplacerPlugin = require('./config/webpackPluginConfig')
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const createThemeColorReplacerPlugin = require('./config/webpackPluginConfig')
 
 const resolve = dir => path.join(__dirname, dir)
 const isEnvProd = process.env.NODE_ENV === 'production'
 const isAnalyzer = process.env.VUE_APP_ANALYZER === 'true'
+const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const assetsCDN = {
   externals: {
@@ -18,10 +17,10 @@ const assetsCDN = {
     'vue-router': 'VueRouter'
   },
   js: [
-    '//cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js',
-    '//cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min.js',
-    '//cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js',
-    '//cdn.jsdelivr.net/npm/vue-router@3.5.3/dist/vue-router.min.js'
+    '//cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js',
+    '//cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js',
+    '//cdn.jsdelivr.net/npm/axios@1.2.1/dist/axios.min.js',
+    '//cdn.jsdelivr.net/npm/vue-router@3.6.5/dist/vue-router.min.js'
   ],
   css: []
 }
@@ -33,43 +32,38 @@ const vueConfig = {
     devtool: 'source-map',
 
     plugins: [
-      ...(isEnvProd
-        ? [
-          new CompressionWebpackPlugin({
-            filename: '[path].gz[query]',
-            algorithm: 'gzip',
-            test: new RegExp('\\.(' + ['html', 'js', 'css'].join('|') + ')$'),
-            deleteOriginalAssets: false,
-            threshold: 10240,
-            minRatio: 0.8
-          }),
-          new UglifyJsPlugin({
-            uglifyOptions: {
-              warnings: false,
-              compress: {
-                drop_debugger: true,
-                drop_console: true,
-                pure_funcs: ['console.log']
-              }
-            },
-            sourceMap: false,
-            parallel: true
-          })
-        ]
-        : []),
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/
+      }),
 
-      ...(isAnalyzer
-        ? [
-          new BundleAnalyzer({
-            analyzerPort: '8881',
-            analyzerMode: 'server',
-            generateStatsFile: true,
-            statsOptions: { source: false }
-          })
-        ]
-        : []),
+      ...(
+        isEnvProd
+          ? [
+            new CompressionWebpackPlugin({
+              filename: '[path][base].gz[query]',
+              algorithm: 'gzip',
+              test: new RegExp('\\.(' + ['html', 'js', 'css'].join('|') + ')$'),
+              deleteOriginalAssets: false,
+              threshold: 10240,
+              minRatio: 0.8
+            })
+          ]
+          : []
+      ),
 
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+      ...(
+        isAnalyzer
+          ? [
+            new BundleAnalyzer({
+              analyzerPort: 'auto',
+              analyzerMode: 'server',
+              generateStatsFile: true,
+              statsOptions: { source: false }
+            })
+          ]
+          : []
+      )
     ],
 
     optimization: {
@@ -113,7 +107,9 @@ const vueConfig = {
             enforce: true
           }
         }
-      }
+      },
+      minimize: true,
+      minimizer: [new TerserWebpackPlugin()]
     },
 
     externals: isEnvProd ? assetsCDN.externals : {}
@@ -122,42 +118,13 @@ const vueConfig = {
   chainWebpack: config => {
     config.resolve.alias.set('@', resolve('src'))
 
-    const imagesRule = config.module.rule('images')
-    imagesRule.uses.clear()
-    imagesRule
-      .use('file-loader')
-      .loader('url-loader')
-      .options({
-        limit: 10240,
-        fallback: {
-          loader: 'file-loader',
-          options: {
-            outputPath: 'static/images'
-          }
-        }
-      })
-
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule
-      .oneOf('SvgIcon')
-      .test(/\/SvgIcon\/libs\//)
-      .use('vue-svg-icon-loader')
-      .loader('vue-svg-icon-loader')
-      .end()
-      .end()
       .oneOf('inline')
       .resourceQuery(/inline/)
       .use('vue-svg-icon-loader')
       .loader('vue-svg-icon-loader')
-      .end()
-      .end()
-      .oneOf('external')
-      .use('file-loader')
-      .loader('file-loader')
-      .options({
-        name: 'assets/[name].[hash:8].[ext]'
-      })
 
     if (isEnvProd) {
       config.plugin('html').tap(args => {

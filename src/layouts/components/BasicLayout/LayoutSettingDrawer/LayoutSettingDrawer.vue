@@ -240,12 +240,13 @@
       <div :style="{ marginBottom: '24px' }">
         <a-alert
           type="warning"
-          :style="{ marginBottom: '10px', fontSize: '14px' }"
+          :style="{ marginBottom: '10px', fontSize: '14px', cursor: 'pointer' }"
+          @click.native="lookSetting"
         >
           <span slot="message">
-            <span>配置栏只在开发环境用于预览、调试</span>
+            <span>配置栏应在开发环境用于预览、调试</span>
             <br>
-            <span>生产环境不会展现，请手动修改配置</span>
+            <span>点击查看配置 - 游览器console界面</span>
           </span>
         </a-alert>
       </div>
@@ -372,6 +373,17 @@ export default {
       const router = this.addRouters.find(find)
       this.AddCachedTags(findChild(router.children, []))
       this.$store.commit(TOGGLE_KEEP_ALIVE, checked)
+    },
+
+    /**
+     * @description 查看配置
+     * @param {Boolean}
+     * @returns {undefined}
+     */
+    lookSetting () {
+      console.info(
+        `export default {\n  title: 'Antd Template',\n  colorWeak: ${this.colorWeak},\n  primaryColor: '${this.primaryColor}',\n  navTheme: '${this.navTheme}',\n  layout: '${this.layoutMode}',\n  multiTab: ${this.multiTab},\n  keepAlive: ${this.keepAlive},\n  autoHideHeader: ${this.autoHideHeader},\n  fixedHeader: ${this.fixedHeader},\n  fixedSidebar: ${this.fixedSidebar},\n  contentWidth: '${this.contentWidth}',\n  storageOptions: {\n    name: 'ls',\n    storage: 'local',\n    namespace: '__'\n  }\n}`
+      )
     }
   }
 }

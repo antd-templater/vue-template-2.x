@@ -51,7 +51,7 @@
         class="drawer-body-table"
         :style="{ width: '100%', height: 'calc(100% - 52px)' }"
       >
-        <base-table
+        <s-table
           ref="table"
           :data="loadData"
           :scroll="scroll"
@@ -69,13 +69,13 @@
           striped
         >
           <template #orgId="key">
-            <base-ellipsis
+            <s-ellipsis
               :tooltip="true"
               :sheared="false"
               :length="10"
             >
               {{ takeLabelByKey(queryOptions.orgTree, key, ['shortName', 'label']) }}
-            </base-ellipsis>
+            </s-ellipsis>
           </template>
 
           <template #isUser="value">
@@ -83,7 +83,7 @@
               {{ value === 'Y' ? '已是用户' : '可导入' }}
             </a-tag>
           </template>
-        </base-table>
+        </s-table>
       </div>
 
       <!-- 按钮组 -->

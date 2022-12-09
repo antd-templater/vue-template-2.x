@@ -3,9 +3,6 @@ import Vuex from 'vuex'
 
 /**
  * @description Vuex 实例
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.use(Vuex)
 

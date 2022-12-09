@@ -22,9 +22,6 @@ const indexRoutePath = '/index'
 
 /**
  * @description 路由跳转前处理
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 router.beforeEach((to, from, next) => {
   if (to.meta && to.meta.title) {
@@ -115,9 +112,6 @@ router.beforeEach((to, from, next) => {
 
 /**
  * @description 路由跳转后处理
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 router.afterEach(() => {
   NProgress.done()

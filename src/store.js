@@ -7,9 +7,6 @@ import router from '@/store/modules/router'
 
 /**
  * @description 模块动态注册
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 store.registerModule('app', app)
 store.registerModule('tags', tags)

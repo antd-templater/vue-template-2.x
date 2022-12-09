@@ -1,6 +1,6 @@
 <template>
   <section class="organize-table-container">
-    <base-table
+    <s-table
       ref="table"
       :data="loadData"
       :scroll="scroll"
@@ -52,7 +52,7 @@
           修改
         </a>
       </template>
-    </base-table>
+    </s-table>
 
     <organize-drawer
       ref="organizeDrawer"

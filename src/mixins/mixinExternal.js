@@ -1,8 +1,5 @@
 /**
  * @description 外部路由
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   methods: {

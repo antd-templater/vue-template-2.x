@@ -1,6 +1,6 @@
 <template>
   <section class="button-drawer-form-container">
-    <base-form
+    <s-form
       ref="form"
       :grid="grid"
       :watch="watch"

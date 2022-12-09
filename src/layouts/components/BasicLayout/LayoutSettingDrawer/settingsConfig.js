@@ -3,9 +3,6 @@ import themeColor from './themeColor.js'
 
 /**
  * @description 主题风格库
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 const colors = [
   {
@@ -44,9 +41,6 @@ const colors = [
 
 /**
  * @description 切换主题风格
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {String} newPrimaryColor
  * @return {undefined}
@@ -60,9 +54,6 @@ const updateColorTheme = newPrimaryColor => {
 
 /**
  * @description 切换色弱模式
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @param {String} colorWeak
  * @return {undefined}

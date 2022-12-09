@@ -2,9 +2,6 @@ import { axios } from '@/utils/request'
 
 /**
  * @description 字典接口
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @api addBaseClass: 新增字典类别信息
  * @api addBaseCode: 新增字典代码信息
@@ -30,7 +27,7 @@ export function addBaseClass (data) {
   return axios({
     url: api.addBaseClass,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -38,7 +35,7 @@ export function addBaseCode (data) {
   return axios({
     url: api.addBaseCode,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -46,7 +43,7 @@ export function getBaseClass (data) {
   return axios({
     url: api.getBaseClass,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -54,7 +51,7 @@ export function getBaseCode (data) {
   return axios({
     url: api.getBaseCode,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -62,7 +59,7 @@ export function modifyBaseClass (data) {
   return axios({
     url: api.modifyBaseClass,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -70,7 +67,7 @@ export function modifyBaseCode (data) {
   return axios({
     url: api.modifyBaseCode,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -78,7 +75,7 @@ export function deleteBaseClass (data) {
   return axios({
     url: api.deleteBaseClass,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -86,7 +83,7 @@ export function deleteBaseCode (data) {
   return axios({
     url: api.deleteBaseCode,
     method: 'post',
-    data: data
+    data
   })
 }
 

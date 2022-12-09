@@ -4,9 +4,6 @@ import api from '@/api/user'
 
 /**
  * @descrption 模拟接口 - 删除用户信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.deleteUserInfo), 'post', options => {
   // 接口参数

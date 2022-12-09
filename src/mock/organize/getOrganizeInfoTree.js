@@ -4,9 +4,6 @@ import api from '@/api/organize'
 
 /**
  * @descrption 模拟接口 - 获取组织Tree列表
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
   // 接口参数
@@ -19,14 +16,11 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
     case '0': {
       result = Utils.builder([
         {
-          doneTag: false,
           isLeaf: false,
           isOrg: 'Y',
           key: '1',
           orgShortName: '集团公司',
-          pageTag: false,
-          title: '浙大远疆投资集团有限公司',
-          todoTag: false
+          title: '浙大远疆投资集团有限公司'
         }
       ])
       break
@@ -34,14 +28,11 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
     case '1': {
       result = Utils.builder([
         {
-          doneTag: false,
           isLeaf: false,
           isOrg: 'Y',
           key: '101.100',
           orgShortName: '港运公司',
-          pageTag: false,
-          title: '港运信息有限公司',
-          todoTag: false
+          title: '港运信息有限公司'
         }
       ])
       break
@@ -49,24 +40,18 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
     case '101.100': {
       result = Utils.builder([
         {
-          doneTag: false,
           isLeaf: true,
           isOrg: 'Y',
           key: '101.100.131',
           orgShortName: '北仑网安',
-          pageTag: false,
-          title: '北仑网安通信有限公司',
-          todoTag: false
+          title: '北仑网安通信有限公司'
         },
         {
-          doneTag: false,
           isLeaf: true,
           isOrg: 'Y',
           key: '101.100.138',
           orgShortName: '宁财港务',
-          pageTag: false,
-          title: '宁财港务有限公司',
-          todoTag: false
+          title: '宁财港务有限公司'
         }
       ])
       break

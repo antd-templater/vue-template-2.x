@@ -4,9 +4,6 @@ import api from '@/api/user'
 
 /**
  * @descrption 模拟接口 - 获取用户列表
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
   // 接口参数
@@ -23,7 +20,6 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         departmentName: '软件部',
         departmentNum: '101.100.131.006',
         departmentSysId: '1126534161135795132',
-        doneTag: false,
         id: '11442970747734161',
         idCard: '330206199901011111',
         mobilePhone: '182588xxx88',
@@ -31,13 +27,11 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         modifyDate: 1642075661198,
         orgId: '101.100.131',
         orgName: '北仑网安通信有限公司',
-        pageTag: false,
         password: '12345678',
         personName: 'admin',
         personNum: '182588xxx88',
         personSysId: '11442970747734160',
         postName: '系统管理',
-        todoTag: false,
         userNo: '182588xxx88'
       },
       {
@@ -47,7 +41,6 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         departmentName: '软件部',
         departmentNum: '101.100.131.006',
         departmentSysId: '1126534161135795132',
-        doneTag: false,
         id: '27442970747734162',
         idCard: '330204198603281111',
         mobilePhone: '182588xxx88',
@@ -55,13 +48,11 @@ Mock.mock(Utils.toRegex(api.getUserInfoList), 'post', options => {
         modifyDate: 1642073951575,
         orgId: '101.100.131',
         orgName: '北仑网安通信有限公司',
-        pageTag: false,
         password: '12345678',
         personName: '林某',
         personNum: '182588xxx88',
         personSysId: '26632627540721721',
         postName: '系统管理',
-        todoTag: false,
         userNo: '182588xxx88'
       }
     ],

@@ -2,9 +2,6 @@ import { BasicLayout, PageView, PageFrame } from '@/layouts'
 
 /**
  * @description 路由配置
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @attribute rootRouter - 根路由
  * @attribute externalRouter - 外部路由

@@ -2,9 +2,6 @@ import { axios } from '@/utils/request'
 
 /**
  * @description 用户接口
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @api addUserInfo: 新增用户信息
  * @api getUserInfo: 获取用户信息
@@ -26,7 +23,7 @@ export function addUserInfo (data) {
   return axios({
     url: api.addUserInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -34,7 +31,7 @@ export function getUserInfo (data) {
   return axios({
     url: api.getUserInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -42,7 +39,7 @@ export function getUserMenu (data) {
   return axios({
     url: api.getUserMenu,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -50,7 +47,7 @@ export function getUserInfoList (data) {
   return axios({
     url: api.getUserInfoList,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -58,7 +55,7 @@ export function modifyUserInfo (data) {
   return axios({
     url: api.modifyUserInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -66,7 +63,7 @@ export function deleteUserInfo (data) {
   return axios({
     url: api.deleteUserInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 

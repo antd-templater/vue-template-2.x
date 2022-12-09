@@ -2,9 +2,6 @@ import { mapGetters, mapActions } from 'vuex'
 
 /**
  * @description 系统应用
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   computed: {

@@ -2,9 +2,6 @@ import { axios } from '@/utils/request'
 
 /**
  * @description 资源接口
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  *
  * @api addResourceInfo: 新增资源信息
  * @api getResourceInfoList: 查询资源信息
@@ -30,7 +27,7 @@ export function addResourceInfo (data) {
   return axios({
     url: api.addResourceInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -38,7 +35,7 @@ export function getResourceInfoList (data) {
   return axios({
     url: api.getResourceInfoList,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -46,7 +43,7 @@ export function getResourceMenuAll (data) {
   return axios({
     url: api.getResourceMenuAll,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -54,7 +51,7 @@ export function getResourceMenuByRole (data) {
   return axios({
     url: api.getResourceMenuByRole,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -62,7 +59,7 @@ export function getResourceButtonByRole (data) {
   return axios({
     url: api.getResourceButtonByRole,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -70,7 +67,7 @@ export function modifyResoureInfoByRoleId (data) {
   return axios({
     url: api.modifyResoureInfoByRoleId,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -78,7 +75,7 @@ export function modifyResourceInfo (data) {
   return axios({
     url: api.modifyResourceInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 
@@ -86,7 +83,7 @@ export function deleteResourceInfo (data) {
   return axios({
     url: api.deleteResourceInfo,
     method: 'post',
-    data: data
+    data
   })
 }
 

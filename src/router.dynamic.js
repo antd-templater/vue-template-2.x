@@ -5,9 +5,6 @@ import {
 
 /**
  * @description 路由与组件的映射
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   ...generatorLayoutRouter(

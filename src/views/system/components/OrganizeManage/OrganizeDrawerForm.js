@@ -1,10 +1,7 @@
-import { extender } from '@/components/BaseForm/helper'
+import { extender } from '@antd-templater/antd-template-lib2.x/SForm/Helper'
 
 /**
  * @description 组织管理 - 表单数据
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export default {
   data () {
@@ -179,7 +176,7 @@ export default {
           // 简称
           if (group.field === 'orgShortName') {
             Object.assign(option, {
-              handleRender (item, { Utils, form }) {
+              handleRender (item, { Util, form }) {
                 return form.getFieldValue('isOrg') !== 'N'
               }
             })
@@ -200,7 +197,7 @@ export default {
           // 上级
           if (group.field === 'parentOrgId') {
             Object.assign(option, {
-              selectOptionsRender (options, { Utils, form }) {
+              selectOptionsRender (options, { Util, form }) {
                 return options.filter(opt => {
                   if (that.action !== 'insert') {
                     const key = that.record.key

@@ -1,16 +1,10 @@
 /**
  * @description TOKEN 字段
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export const ACCESS_TOKEN = 'ACCESS_TOKEN'
 
 /**
  * @description 用户字段
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 export const ORG_ID = 'ORG_ID'
 export const ORG_NAME = 'ORG_NAME'

@@ -60,9 +60,6 @@ import {
 
 /**
  * @description 组件库按需加载
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.use(Carousel)
 Vue.use(Cascader)
@@ -122,9 +119,6 @@ Vue.use(notification)
 
 /**
  * @description 注入Vue实例
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Vue.prototype.$message = message
 Vue.prototype.$notification = notification
@@ -136,9 +130,6 @@ Vue.prototype.$info = Modal.info
 
 /**
  * @description 通知框全局配置
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 message.config({
   duration: 1.5

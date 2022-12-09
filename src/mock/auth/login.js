@@ -4,9 +4,6 @@ import api from '@/api/auth'
 
 /**
  * @descrption 模拟接口 - 系统登录
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.login), 'post', options => {
   // 接口参数
@@ -35,15 +32,12 @@ Mock.mock(Utils.toRegex(api.login), 'post', options => {
       activity: 'Y',
       createBy: 'admin',
       createDate: 1642073941231,
-      doneTag: false,
       id: '11442970747734161',
       mobilePhone: '182588xxx88',
       modifyBy: 'admin',
       modifyDate: 1642075669198,
       orgId: '101.100.131',
-      pageTag: false,
       personSysId: '11442970747734160',
-      todoTag: false,
       userNo: '182588xxx88'
     },
     token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxODI1ODc2NDMyMSIsImV4cCI6MTY0MjQ4NTQwNX0.gFrCkMY5OlheC7sF7elhb8cF2fvkD-dj950xklyI14Q'

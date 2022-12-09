@@ -4,9 +4,6 @@ import api from '@/api/organize'
 
 /**
  * @descrption 模拟接口 - 修改组织信息
- * @date 2022-07-11
- * @lastModifiedBy
- * @lastModifiedDate
  */
 Mock.mock(Utils.toRegex(api.modifyOrganizeInfo), 'post', options => {
   // 接口参数
