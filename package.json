@@ -20,12 +20,13 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "preinstall": "npx only-allow yarn",
+    "postinstall": "patch-package",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "pretty": "npx prettier --write --loglevel warn \"src/**/*.vue\"",
     "eslint": "npx eslint --fix --quiet src --ext .vue,.js",
-    "format": "yarn pretty && yarn eslint",
-    "postinstall": "patch-package"
+    "format": "yarn pretty && yarn eslint"
   },
   "dependencies": {
     "@ant-design-vue/pro-layout": "^1.0.13",
@@ -75,6 +76,7 @@
     "webpack-theme-color-replacer": "^1.4.2"
   },
   "engines": {
-    "node": ">=16.0.0 <=18.0.0"
+    "node": ">=16.0.0 <=18.0.0",
+    "yarn": ">= 1.0.0 < 2.0.0"
   }
 }
