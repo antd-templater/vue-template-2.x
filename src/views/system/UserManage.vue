@@ -158,7 +158,7 @@ export default {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: calc(100% - 36px);
+  height: calc(100% - 40px);
   padding: 24px 24px 12px;
   position: absolute;
   .section-query-container {
