@@ -3,7 +3,11 @@
   "description": "PC端管理类模版 - 基于 Vue2.x Ant Design Vue 组件库",
   "homepage": "https://github.com/antd-templater/antd-template-vue2.x",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
-  "version": "1.1.0",
+  "version": "1.1.1",
+  "keywords": [
+    "front-end",
+    "ant design vue"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antd-templater/antd-template-vue2.x.git"
@@ -25,7 +29,7 @@
   "dependencies": {
     "@ant-design-vue/pro-layout": "^1.0.13",
     "@ant-design/colors": "4.0.1",
-    "@antd-templater/antd-template-lib2.x": "^1.0.0",
+    "@antd-templater/antd-template-lib2.x": "^1.0.1",
     "ant-design-vue": "^1.7.8",
     "axios": "^1.2.1",
     "core-js": "^3.25.3",

@@ -60,10 +60,10 @@
   resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-2.1.1.tgz#7b9c08dffd4f5d41db667d9dbe5e0107d0bd9a4a"
   integrity sha512-jCH+k2Vjlno4YWl6g535nHR09PwCEmTBKAG6VqF+rhkrSPRLfgpU2maagwbZPLjaHuU5Jd1DFQ2KJpQuI6uG8w==
 
-"@antd-templater/antd-template-lib2.x@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@antd-templater/antd-template-lib2.x/-/antd-template-lib2.x-1.0.0.tgz#707d52da45780ad90def7af2075517cdf9b7b5cb"
-  integrity sha512-MVyfGZNBnwofwBv4iqme/+srbiNAetfC+/TNy+E0c2686bb8Y0kTjmcJJlSrx64IbzPbTQnqTD/kfS/Ido7tkw==
+"@antd-templater/antd-template-lib2.x@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@antd-templater/antd-template-lib2.x/-/antd-template-lib2.x-1.0.1.tgz#8ea6edd00779a4a85e04108decd65d65d86bd5c1"
+  integrity sha512-QmKhuv+fQUkTOYchRKVP/qogFRGckA6B+IFuyZLuZ1X3o3XnPKp6gVu2JG7Yp7gTLzaAMXmkU2xpXVlWeIodxA==
   dependencies:
     ant-design-vue "^1.7.8"
     moment "^2.29.4"
