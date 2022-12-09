@@ -3,7 +3,7 @@
   "description": "PC端管理类模版 - 基于 Vue2.x Ant Design Vue 组件库",
   "homepage": "https://github.com/antd-templater/antd-template-vue2.x",
   "author": "lin pengteng <china.linpengteng@gmail.com>",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "keywords": [
     "front-end",
     "ant design vue"
@@ -24,7 +24,8 @@
     "build": "vue-cli-service build",
     "pretty": "npx prettier --write --loglevel warn \"src/**/*.vue\"",
     "eslint": "npx eslint --fix --quiet src --ext .vue,.js",
-    "format": "yarn pretty && yarn eslint"
+    "format": "yarn pretty && yarn eslint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@ant-design-vue/pro-layout": "^1.0.13",
@@ -65,6 +66,8 @@
     "eslint-plugin-vue": "^9.8.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "patch-package": "^6.5.0",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.8.1",
     "terser-webpack-plugin": "^5.3.6",
     "vue-svg-icon-loader": "^2.1.1",

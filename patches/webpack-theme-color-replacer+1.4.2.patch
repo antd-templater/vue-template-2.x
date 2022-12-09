@@ -1,0 +1,108 @@
+diff --git a/node_modules/webpack-theme-color-replacer/src/Handler.js b/node_modules/webpack-theme-color-replacer/src/Handler.js
+index eb561be..3ef9fee 100644
+--- a/node_modules/webpack-theme-color-replacer/src/Handler.js
++++ b/node_modules/webpack-theme-color-replacer/src/Handler.js
+@@ -1,4 +1,5 @@
+ 'use strict';
++var webpack = require('webpack')
+ var AssetsExtractor = require('./AssetsExtractor')
+ var replaceFileName = require('./replaceFileName')
+ var { ConcatSource } = require('webpack-sources');
+@@ -22,10 +23,19 @@ module.exports = class Handler {
+ 
+         //Add to assets for output
+         var outputName = getFileName(this.options.fileName, output)
+-        compilation.assets[outputName] = {
+-            source: () => output,
+-            size: () => output.length
+-        };
++
++        // Add Webpack5 Support
++        if (webpack.version[0] >= '5') {
++            compilation.emitAsset(
++                outputName,
++                new webpack.sources.RawSource(output)
++            );
++        } else {
++            compilation.assets[outputName] = {
++                source: () => output,
++                size: () => output.length
++            };
++        }
+ 
+         var injectToHtmlReg = this.options.injectToHtml;
+         if (injectToHtmlReg) {
+@@ -52,14 +62,23 @@ module.exports = class Handler {
+             var source = compilation.assets[name];
+             var configJs = this.getConfigJs(outputName, cssCode)
+             var content = source.source().replace(/(\<|\\x3C)script/i, m => '<script>' + configJs + '</script>\n' + m);
+-            delete compilation.assets[name];
+-            compilation.assets[name] = {
+-                source: () => content,
+-                name,
+-                size: () => {
+-                    return Buffer.byteLength(content, 'utf8');
+-                },
+-            };
++
++            // Add Webpack5 Support
++            if (webpack.version[0] >= '5') {
++                compilation.emitAsset(
++                  name,
++                  new webpack.sources.RawSource(content)
++                );
++            } else {
++                delete compilation.assets[name];
++                compilation.assets[name] = {
++                    source: () => content,
++                    name,
++                    size: () => {
++                      return Buffer.byteLength(content, 'utf8');
++                    },
++                };
++            }
+         });
+     }
+ 
+@@ -105,5 +124,3 @@ module.exports = class Handler {
+         return new ConcatSource(assetSource, configJs)
+     }
+ }
+\ No newline at end of file
+-
+-
+diff --git a/node_modules/webpack-theme-color-replacer/src/index.js b/node_modules/webpack-theme-color-replacer/src/index.js
+index 6b6a496..79a6c4d 100644
+--- a/node_modules/webpack-theme-color-replacer/src/index.js
++++ b/node_modules/webpack-theme-color-replacer/src/index.js
+@@ -24,10 +24,26 @@ class ThemeColorReplacer {
+         new webpack.DefinePlugin({
+             WP_THEME_CONFIG: JSON.stringify(this.handler.options.configVar)
+         }).apply(compiler)
+-        this.getBinder(compiler, 'emit')((compilation, callback) => {
+-            this.handler.handle(compilation)
+-            callback()
+-        });
++        
++        if (webpack.version[0] >= '5') {
++              // Add Webpack5 Support
++              compiler.hooks.thisCompilation.tap('ThemeColorReplacer', (compilation) => {
++                  compilation.hooks.processAssets.tapAsync(
++                      {
++                        name: 'ThemeColorReplacer',
++                        stage: webpack.Compilation.PROCESS_ASSETS_STAGE_ADDITIONS
++                      },
++                      (compilationAssets, callback) => {        
++                        this.handler.handle(compilation)
++                        callback()
++                      });
++              });
++        } else {
++              this.getBinder(compiler, 'emit')((compilation, callback) => {
++                  this.handler.handle(compilation)
++                  callback()
++              });
++        }
+     }
+ }
+ 
