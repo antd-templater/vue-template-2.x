@@ -108,8 +108,8 @@ const vueConfig = {
           }
         }
       },
-      minimize: true,
-      minimizer: [new TerserWebpackPlugin()]
+      minimize: isEnvProd,
+      minimizer: isEnvProd ? [new TerserWebpackPlugin()] : []
     },
 
     externals: isEnvProd ? assetsCDN.externals : {}

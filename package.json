@@ -49,6 +49,8 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-router": "^5.0.8",
@@ -59,14 +61,17 @@
     "babel-plugin-import": "^1.13.5",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "compression-webpack-plugin": "^10.0.0",
+    "cz-message-helper": "^1.1.1",
     "eslint": "^8.24.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-vue": "^9.8.0",
+    "husky": "^8.0.2",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "lint-staged": "^13.1.0",
     "patch-package": "^6.5.0",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.8.1",
@@ -74,6 +79,11 @@
     "vue-svg-icon-loader": "^2.1.1",
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-theme-color-replacer": "^1.4.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-message-helper"
+    }
   },
   "engines": {
     "node": ">=16.0.0 <=18.0.0",
