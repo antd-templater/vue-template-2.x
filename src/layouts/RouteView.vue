@@ -8,6 +8,16 @@ export default {
   mixins: [mixinApp, mixinTags, mixinExternal],
   computed: {
     /**
+     * @description 启用缓存
+     * @returns {Boolean}
+     */
+    isKeepAlive () {
+      const multiTab = this.multiTab
+      const keepAlive = this.keepAlive
+      const isEnvProd = process.env.NODE_ENV === 'production' // Issues: https://github.com/vuejs/vue-cli/issues/5008
+      return multiTab && keepAlive && isEnvProd
+    },
+    /**
      * @description 路由标识
      * @returns {String}
      */
@@ -22,10 +32,10 @@ export default {
   },
   render () {
     const key = this.key
-    const multiTab = this.multiTab
-    const keepAlive = this.keepAlive
     const cachedTags = this.cachedTags
-    if (multiTab && keepAlive) {
+    const isKeepAlive = this.isKeepAlive
+
+    if (isKeepAlive) {
       return (
         <keep-alive include={cachedTags}>
           <router-view key={key} />

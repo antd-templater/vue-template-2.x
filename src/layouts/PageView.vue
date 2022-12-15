@@ -1,7 +1,7 @@
 <template>
   <section class="page-view-container">
     <keep-alive
-      v-if="multiTab && keepAlive"
+      v-if="isKeepAlive"
       :include="cachedTags"
     >
       <router-view :key="key"/>
@@ -19,6 +19,16 @@ export default {
   name: 'PageView',
   mixins: [mixinApp, mixinTags, mixinExternal],
   computed: {
+    /**
+     * @description 启用缓存
+     * @returns {Boolean}
+     */
+    isKeepAlive () {
+      const multiTab = this.multiTab
+      const keepAlive = this.keepAlive
+      const isEnvProd = process.env.NODE_ENV === 'production' // Issues: https://github.com/vuejs/vue-cli/issues/5008
+      return multiTab && keepAlive && isEnvProd
+    },
     /**
      * @description 路由标识
      * @returns {String}

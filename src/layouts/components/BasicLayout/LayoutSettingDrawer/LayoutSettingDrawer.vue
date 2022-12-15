@@ -299,7 +299,9 @@ export default {
     if (this.colorWeak !== defaultSettings.colorWeak) {
       updateColorWeak(this.colorWeak)
     }
-    updateColorTheme(this.primaryColor)
+    if (process.env.VUE_APP_PREVIEW === 'true') {
+      updateColorTheme(this.primaryColor)
+    }
   },
   methods: {
     /**
