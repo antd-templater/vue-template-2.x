@@ -60,10 +60,10 @@
   resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-2.1.1.tgz#7b9c08dffd4f5d41db667d9dbe5e0107d0bd9a4a"
   integrity sha512-jCH+k2Vjlno4YWl6g535nHR09PwCEmTBKAG6VqF+rhkrSPRLfgpU2maagwbZPLjaHuU5Jd1DFQ2KJpQuI6uG8w==
 
-"@antd-templater/antd-template-lib2.x@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@antd-templater/antd-template-lib2.x/-/antd-template-lib2.x-1.0.1.tgz#8ea6edd00779a4a85e04108decd65d65d86bd5c1"
-  integrity sha512-QmKhuv+fQUkTOYchRKVP/qogFRGckA6B+IFuyZLuZ1X3o3XnPKp6gVu2JG7Yp7gTLzaAMXmkU2xpXVlWeIodxA==
+"@antd-templater/antd-template-lib2.x@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@antd-templater/antd-template-lib2.x/-/antd-template-lib2.x-1.0.4.tgz#d542c6dd897066f29d6a8e07e60f4a4c30190b3a"
+  integrity sha512-WKs4fyWt0LQvMO3/hDTN83S56wByud7C4UGzqbJs5P1pWEFg+pq1i1k8kzFYJqnCIKZnmhBVbsCYtd/l2QU4xg==
   dependencies:
     ant-design-vue "^1.7.8"
     moment "^2.29.4"
@@ -3217,10 +3217,10 @@ csstype@^3.1.0:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
 
-cz-message-helper@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/cz-message-helper/-/cz-message-helper-1.1.1.tgz#baa92c4c3da4aa9552ad198c54b1314caf7e0e54"
-  integrity sha512-vt2AGsWnOmy8wgPKDYJMcRH/Dy5ur5xp3xf8a8EZX06T2w/mBn9PtaTjTTpZoJh27QWYB2Eio0cFOIiFwuPOCg==
+cz-message-helper@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/cz-message-helper/-/cz-message-helper-1.1.8.tgz#a9f3301a64a19f316c91b8549b3c791244276560"
+  integrity sha512-WX1tIa6qyOoVzLoOYZF7e/15X5vbfziq0BiKg0MdwQXCR/hicMx5Frg9M9LadIeK9fVvJGcoZKMG4196sYAWvg==
   dependencies:
     find-config "^1.0.0"
     inquirer "^9.1.4"
@@ -7989,17 +7989,15 @@ webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-sources@*, webpack-sources@^3.2.3:
+webpack-sources@^3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack-theme-color-replacer@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/webpack-theme-color-replacer/-/webpack-theme-color-replacer-1.4.2.tgz#5fd0eb859850659cae9c4692787cf6e7b194803d"
-  integrity sha512-rjCRuezehs341YxLw2YuVKrC5uWEQQPAdn1mqmgpx+p03bkvgQuBh7btr0eIXW6bjUwtxkp2pIf4lwro2wQbBA==
-  dependencies:
-    webpack-sources "*"
+webpack-theme-color-replacer@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/webpack-theme-color-replacer/-/webpack-theme-color-replacer-1.4.5.tgz#f3315d389721121c0a738e6b45b3760cdac0667e"
+  integrity sha512-nPRTFR1jIwc98WtRigYC6WBpB3bff48mAKQ10VgTXDLiQdXdKO/DKY1mXEZjuCwvq3onyItHCNHN8eCOyCHO4w==
 
 webpack-virtual-modules@^0.4.2:
   version "0.4.6"
