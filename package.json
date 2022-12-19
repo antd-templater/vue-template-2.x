@@ -21,7 +21,7 @@
   },
   "scripts": {
     "preinstall": "npx only-allow yarn",
-    "postinstall": "patch-package",
+    "postinstall": "patch-package && npx husky install",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "pretty": "npx prettier --write --loglevel warn \"src/**/*.vue\"",
