@@ -17,26 +17,24 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoList), 'post', options => {
       result = Utils.builder({
         data: [
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '1',
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '浙大远疆投资集团有限公司',
             orgShortName: '集团公司',
             parentOrgId: '0',
             parentOrgName: '',
-            title: '浙大远疆投资集团有限公司'
+            activity: 'Y'
           },
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '101.100',
-            modifyBy: 'admin',
-            modifyDate: 1586933844775,
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '港运信息有限公司',
             orgShortName: '港运公司',
             parentOrgId: '1',
             parentOrgName: '浙大远疆投资集团有限公司',
-            title: '港运信息有限公司'
+            activity: 'Y'
           }
         ],
         pageNo: 1,
@@ -50,40 +48,34 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoList), 'post', options => {
       result = Utils.builder({
         data: [
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '101.100',
-            modifyBy: 'admin',
-            modifyDate: 1586933844775,
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '港运信息有限公司',
             orgShortName: '港运公司',
             parentOrgId: '1',
             parentOrgName: '浙大远疆投资集团有限公司',
-            title: '港运信息有限公司'
+            activity: 'Y'
           },
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '101.100.131',
-            modifyBy: 'admin',
-            modifyDate: 1587974005199,
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '北仑网安通信有限公司',
             orgShortName: '北仑网安',
             parentOrgId: '101.100',
             parentOrgName: '港运信息有限公司',
-            title: '北仑网安通信有限公司'
+            activity: 'Y'
           },
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '101.100.138',
-            modifyBy: '',
-            modifyDate: 1511196241514,
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '宁财港务有限公司',
             orgShortName: '宁财港务',
             parentOrgId: '101.100',
             parentOrgName: '港运信息有限公司',
-            title: '宁财港务有限公司'
+            activity: 'Y'
           }
         ],
         pageNo: 1,
@@ -97,100 +89,110 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoList), 'post', options => {
       result = Utils.builder({
         data: [
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '101.100.131',
-            modifyBy: 'admin',
-            modifyDate: 1587974005199,
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '北仑网安通信有限公司',
             orgShortName: '北仑网安',
             parentOrgId: '101.100',
             parentOrgName: '港运信息有限公司',
-            title: '北仑网安通信有限公司'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795126',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '公司部',
             orgShortName: '',
-            title: '公司部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795127',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '人事部',
             orgShortName: '',
-            title: '人事部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795128',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '财务部',
             orgShortName: '',
-            title: '财务部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795129',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '市场部',
             orgShortName: '',
-            title: '市场部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795130',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '运维部',
             orgShortName: '',
-            title: '运维部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795131',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '系统部',
             orgShortName: '',
-            title: '系统部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795132',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '开发部',
             orgShortName: '',
-            title: '开发部'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795133',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '大数据中心',
             orgShortName: '',
-            title: '大数据中心'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795134',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '技术中心',
             orgShortName: '',
-            title: '技术中心'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795135',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '研发中心',
             orgShortName: '',
-            title: '研发中心'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1126534161135795642',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '后勤中心',
             orgShortName: '',
-            title: '后勤中心'
+            activity: 'Y'
           },
           {
-            isLeaf: true,
-            isOrg: 'N',
             key: '1127020120488651741',
+            isOrg: 'N',
+            isLeaf: true,
+            title: '工程部',
             orgShortName: '',
-            title: '工程部'
+            activity: 'Y'
           }
         ],
         pageNo: 1,
@@ -204,16 +206,14 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoList), 'post', options => {
       result = Utils.builder({
         data: [
           {
-            activity: 'Y',
-            isLeaf: false,
-            isOrg: 'Y',
             key: '101.100.138',
-            modifyBy: '',
-            modifyDate: 1511196241514,
+            isOrg: 'Y',
+            isLeaf: false,
+            title: '宁财港务有限公司',
             orgShortName: '宁财港务',
             parentOrgId: '101.100',
             parentOrgName: '港运信息有限公司',
-            title: '宁财港务有限公司'
+            activity: 'Y'
           }
         ],
         pageNo: 1,

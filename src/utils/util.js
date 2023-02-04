@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import moment from 'moment'
-import { ORG_ID, PERSON_ID, OPERATOR, DATA_FLAG } from '@/store/variable'
+import { ORG_ID, DATA_FLAG } from '@/store/variable'
 
 /**
  * @description 补齐数值精度
@@ -219,8 +219,6 @@ export const requestBuilder = (
     param,
     action,
     orgId: Vue.ls.get(ORG_ID),
-    personId: Vue.ls.get(PERSON_ID),
-    operator: Vue.ls.get(OPERATOR),
     dataFlag: Vue.ls.get(DATA_FLAG),
     sortField: toSortField(sortField, sortOrder),
     sortOrder: toSortOrder(sortField, sortOrder),

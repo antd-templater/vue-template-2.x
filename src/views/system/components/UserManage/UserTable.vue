@@ -25,13 +25,13 @@
         </s-ellipsis>
       </template>
 
-      <template #departmentSysId="key">
+      <template #deptId="key">
         <s-ellipsis
           :tooltip="true"
           :sheared="false"
           :length="16"
         >
-          {{ takeLabelByKey(queryOptions.departmentSysId, key) }}
+          {{ takeLabelByKey(queryOptions.deptId, key) }}
         </s-ellipsis>
       </template>
 
@@ -88,7 +88,7 @@ export default {
       default: function () {
         return {
           orgTree: [],
-          departmentSysId: [],
+          deptId: [],
           roleId: []
         }
       }
@@ -114,7 +114,7 @@ export default {
       // 查询参数
       queryParam: {
         userNo: '',
-        personName: '',
+        userName: '',
         mobilePhone: '',
         activity: ''
       },
@@ -128,8 +128,8 @@ export default {
           width: 130
         },
         {
-          title: '员工姓名',
-          dataIndex: 'personName',
+          title: '用户姓名',
+          dataIndex: 'userName',
           ellipsis: true,
           width: 130
         },
@@ -153,8 +153,8 @@ export default {
         },
         {
           title: '所属部门',
-          dataIndex: 'departmentSysId',
-          scopedSlots: { customRender: 'departmentSysId' },
+          dataIndex: 'deptId',
+          scopedSlots: { customRender: 'deptId' },
           ellipsis: true,
           width: 120
         },
@@ -194,7 +194,7 @@ export default {
           deepUpdate(
             {
               userNo: '',
-              personName: '',
+              userName: '',
               mobilePhone: '',
               activity: ''
             },

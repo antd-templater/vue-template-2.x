@@ -79,7 +79,7 @@
             style="margin-bottom: 0"
           >
             <a-input
-              v-model="queryParam.personName"
+              v-model="queryParam.userName"
               placeholder="请输入用户姓名"
               allowClear
               @pressEnter="doQuery"
@@ -127,7 +127,7 @@ export default {
     return {
       queryParam: {
         userNo: '',
-        personName: '',
+        userName: '',
         mobilePhone: '',
         activity: ''
       },
@@ -167,7 +167,7 @@ export default {
     doReset (query) {
       this.queryParam = {
         userNo: '',
-        personName: '',
+        userName: '',
         mobilePhone: '',
         activity: ''
       }

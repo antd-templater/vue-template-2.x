@@ -8,11 +8,10 @@ import {
   ORG_NAME,
   DEPT_ID,
   DEPT_NAME,
+  OPERATOR,
+  USER_NAME,
   DATA_FLAG,
-  PERSON_ID,
-  PERSON_NAME,
-  ACCESS_TOKEN,
-  OPERATOR
+  ACCESS_TOKEN
 } from '@/store/variable'
 
 const DEFUALT_AVATAR = require('@/assets/avatar/default_avatar.png')
@@ -23,8 +22,8 @@ const DEFUALT_AVATAR = require('@/assets/avatar/default_avatar.png')
 export default {
   state: {
     token: '',
+    userName: '',
     rememberMe: true,
-    personName: '',
     avatar: DEFUALT_AVATAR,
     roles: {},
     info: {}
@@ -33,8 +32,7 @@ export default {
   getters: {
     token: state => state.token,
     rememberMe: state => state.rememberMe,
-    personName: state => state.personName,
-    nickname: state => state.personName,
+    nickName: state => state.userName,
     userInfo: state => state.info,
     avatar: state => state.avatar,
     roles: state => state.roles
@@ -51,7 +49,7 @@ export default {
     },
     /* 储存 用户名 */
     SET_NAME: (state, name) => {
-      state.personName = name
+      state.userName = name
     },
     /* 储存 用户信息 */
     SET_INFO: (state, info) => {
@@ -87,11 +85,9 @@ export default {
           const data = result.data || {}
           const orgId = data.orgId || ''
           const userNo = data.userNo || ''
-          const personSysId = data.personSysId || ''
           const token = result.token || ''
 
           Vue.ls.set(ACCESS_TOKEN, token, expires)
-          Vue.ls.set(PERSON_ID, personSysId, expires)
           Vue.ls.set(OPERATOR, userNo, expires)
           Vue.ls.set(ORG_ID, orgId, expires)
 
@@ -117,14 +113,13 @@ export default {
         dispatch('DelAllTags', [])
 
         Vue.ls.remove(ACCESS_TOKEN)
-        Vue.ls.remove(PERSON_ID)
         Vue.ls.remove(OPERATOR)
         Vue.ls.remove(ORG_ID)
         Vue.ls.remove(ORG_NAME)
         Vue.ls.remove(DEPT_ID)
         Vue.ls.remove(DEPT_NAME)
         Vue.ls.remove(DATA_FLAG)
-        Vue.ls.remove(PERSON_NAME)
+        Vue.ls.remove(USER_NAME)
 
         resolve()
       })
@@ -143,10 +138,10 @@ export default {
           const role = result.role || {}
           const avatar = result.avatar || ''
           const orgName = result.orgName || ''
+          const userName = result.userName || ''
           const dataFlag = result.dataFlag || ''
-          const personName = result.personName || ''
-          const departmentName = result.departmentName || ''
-          const departmentSysId = result.departmentSysId || ''
+          const deptId = result.deptId || ''
+          const deptName = result.deptName || ''
           const permissions = role.permissions || []
 
           // 角色及权限校验
@@ -163,16 +158,16 @@ export default {
               return permission.permissionId
             })
 
-            commit('SET_NAME', personName)
+            commit('SET_NAME', userName)
             commit('SET_AVATAR', avatar)
             commit('SET_ROLES', role)
             commit('SET_INFO', result)
 
             Vue.ls.set(ORG_NAME, orgName)
-            Vue.ls.set(DEPT_ID, departmentSysId)
-            Vue.ls.set(DEPT_NAME, departmentName)
+            Vue.ls.set(DEPT_ID, deptId)
+            Vue.ls.set(USER_NAME, userName)
+            Vue.ls.set(DEPT_NAME, deptName)
             Vue.ls.set(DATA_FLAG, dataFlag)
-            Vue.ls.set(PERSON_NAME, personName)
 
             return response
           }

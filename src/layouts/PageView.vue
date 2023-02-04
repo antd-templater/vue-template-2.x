@@ -49,6 +49,7 @@ export default {
 .page-view-container {
   flex: 1 0 auto;
   flex-flow: column nowrap;
+  position: relative;
   display: flex;
   width: 100%;
   height: 100%;

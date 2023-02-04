@@ -69,7 +69,7 @@ export default {
       // 选项框
       queryOptions: {
         orgTree: [],
-        departmentSysId: [],
+        deptId: [],
         roleId: []
       },
 
@@ -109,8 +109,8 @@ export default {
         if (res.code !== '0000') {
           return Promise.reject(new Error(res))
         }
-        this.queryOptions.departmentSysId.splice(0)
-        this.queryOptions.departmentSysId.push(...res.result)
+        this.queryOptions.deptId.splice(0)
+        this.queryOptions.deptId.push(...res.result)
       })
 
       // 角色

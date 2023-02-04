@@ -12,28 +12,12 @@ require('./auth/modifyPassword')
 require('./base/getOptionById')
 require('./base/getTreeById')
 
-// 字典接口
-require('./dictionary/addBaseClass')
-require('./dictionary/addBaseCode')
-require('./dictionary/getBaseClass')
-require('./dictionary/getBaseCode')
-require('./dictionary/modifyBaseClass')
-require('./dictionary/modifyBaseCode')
-require('./dictionary/deleteBaseClass')
-require('./dictionary/deleteBaseCode')
-
 // 组织接口
 require('./organize/addOrganizeInfo')
 require('./organize/getOrganizeInfoTree')
 require('./organize/getOrganizeInfoList')
 require('./organize/modifyOrganizeInfo')
 require('./organize/deleteOrganizeInfo')
-
-// 员工接口
-require('./person/addPersonInfo')
-require('./person/getPersonInfoList')
-require('./person/modifyPersonInfo')
-require('./person/deletePersonInfo')
 
 // 资源接口
 require('./resource/addResourceInfo')
@@ -61,6 +45,4 @@ require('./user/getUserInfoList')
 require('./user/modifyUserInfo')
 require('./user/deleteUserInfo')
 
-Mock.setup({
-  timeout: 500
-})
+Mock.setup({ timeout: 500 })

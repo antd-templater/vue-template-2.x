@@ -10,37 +10,6 @@
       :disabled="disabled"
       :readonly="readonly"
       :spinning="spinning"
-    >
-      <template #userNo="{ field, label, decorator, binds, events }">
-        <a-form-item :label="label">
-          <a-input-search
-            v-if="action === 'insert'"
-            v-decorator="[field, decorator]"
-            v-bind="binds"
-            v-on="events"
-          >
-            <a-button
-              slot="enterButton"
-              icon="team"
-              type="primary"
-              style="font-size: 18px"
-              @click.native="doSearchPerson"
-            />
-          </a-input-search>
-          <a-input
-            v-else
-            v-decorator="[field, decorator]"
-            v-bind="binds"
-            v-on="events"
-          />
-        </a-form-item>
-      </template>
-    </s-form>
-
-    <person-table-drawer
-      ref="personTableDrawer"
-      :queryOptions="queryOptions"
-      @submitted="doSelectPerson"
     />
   </section>
 </template>
@@ -49,25 +18,19 @@
 import { requestBuilder } from '@/utils/util'
 import * as userApi from '@/api/user'
 
-// 导入员工抽屉框
-import PersonTableDrawer from './PersonTableDrawer'
-
 // 导入表单配置
 import FormConfig from './UserDrawerForm.js'
 
 export default {
   name: 'UserDrawerForm',
   mixins: [FormConfig],
-  components: {
-    PersonTableDrawer
-  },
   props: {
     queryOptions: {
       type: Object,
       default: function () {
         return {
           orgTree: [],
-          departmentSysId: [],
+          deptId: [],
           roleId: []
         }
       }
@@ -266,26 +229,6 @@ export default {
               this.spinning = false
             })
         }
-      })
-    },
-
-    /**
-     * @description 查询员工
-     * @returns {undefined}
-     */
-    doSearchPerson () {
-      this.$refs.personTableDrawer.doOpen()
-    },
-
-    /**
-     * @description 选择员工
-     * @param {Object} record
-     * @returns {undefined}
-     */
-    doSelectPerson (record) {
-      this.setFieldsValue({
-        ...record,
-        userNo: record.mobilePhone
       })
     }
   }

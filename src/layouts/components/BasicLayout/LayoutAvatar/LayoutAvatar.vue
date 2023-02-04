@@ -7,7 +7,7 @@
           class="layout-avatar-img"
           :src="avatar"
         />
-        <span class="layout-avatar-nick">{{ nickname }}</span>
+        <span class="layout-avatar-nick">{{ nickName }}</span>
       </div>
 
       <a-menu
@@ -214,7 +214,7 @@ export default {
             newPassword: this.form.getFieldValue('newPassword')
           }
           authApi
-            .modifyPassword({ param: param })
+            .modifyPassword({ param })
             .then(res => {
               if (res.code !== '0000') {
                 if (res.message) {

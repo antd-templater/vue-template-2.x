@@ -164,19 +164,6 @@ export default {
           width: 100
         },
         {
-          title: '最后修改时间',
-          dataIndex: 'modifyDate',
-          scopedSlots: { customRender: 'modifyDate' },
-          ellipsis: true,
-          width: 160
-        },
-        {
-          title: '最后修改人',
-          dataIndex: 'modifyBy',
-          ellipsis: true,
-          width: 120
-        },
-        {
           title: '操作',
           scopedSlots: { customRender: 'action' },
           align: 'center',

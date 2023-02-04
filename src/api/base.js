@@ -1,6 +1,4 @@
-import Vue from 'vue'
 import { axios } from '@/utils/request'
-import { ORG_ID } from '@/store/variable'
 
 /**
  * @description 基础接口
@@ -17,13 +15,7 @@ export function getOptionById (data) {
   return axios({
     url: api.getOptionById,
     method: 'post',
-    data: {
-      ...data,
-      sqlParams: {
-        orgId: Vue.ls.get(ORG_ID),
-        ...data.sqlParams
-      }
-    }
+    data
   })
 }
 
@@ -31,13 +23,7 @@ export function getTreeById (data) {
   return axios({
     url: api.getTreeById,
     method: 'post',
-    data: {
-      ...data,
-      sqlParams: {
-        orgId: Vue.ls.get(ORG_ID),
-        ...data.sqlParams
-      }
-    }
+    data
   })
 }
 

@@ -119,7 +119,7 @@ export default {
       queryParam: {
         title: '',
         orgId: '',
-        departmentSysId: '',
+        deptId: '',
         activity: ''
       },
 
@@ -189,7 +189,7 @@ export default {
             {
               title: '',
               orgId: '',
-              departmentSysId: '',
+              deptId: '',
               activity: ''
             },
             this.queryParam

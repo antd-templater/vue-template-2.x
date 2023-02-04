@@ -12,7 +12,7 @@
             <span>系统平台</span>
           </div>
           <div class="description">
-            <span>基于 Ant Design Vue 框架搭建</span>
+            <span>基于 Ant Design Vue v2.x 框架搭建</span>
           </div>
         </div>
 
@@ -97,11 +97,6 @@
     </div>
 
     <div class="footer">
-      <div class="links">
-        <a href="_self">帮助</a>
-        <a href="_self">隐私</a>
-        <a href="_self">条款</a>
-      </div>
       <div class="copyright">Copyright &copy; 2022 Antd-Templater</div>
     </div>
   </section>
@@ -178,11 +173,13 @@ section {
   flex-flow: row nowrap;
   justify-content: center;
   background: #f0f2f5 url(~@/assets/login/background.svg);
+
   & > .main {
     width: 400px;
     height: 100%;
     flex: 0 0 auto;
     position: relative;
+
     & > .main-container {
       height: 450px;
       margin: auto 0;
@@ -192,23 +189,27 @@ section {
       left: 45px;
       right: 45px;
       bottom: 180px;
+
       & > .main-header {
-        width: calc(100% - 80px);
+        width: calc(100% - 72px);
         height: auto;
         margin: 0 auto 48px;
+
         & > .title {
+          font-size: 33px;
+          color: rgba(0, 0, 0, 0.85);
+          text-align: center;
+          font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+          font-weight: 600;
+
           & > .logo {
             height: 44px;
             vertical-align: top;
             margin-right: 16px;
             border-style: none;
           }
-          font-size: 33px;
-          color: rgba(0, 0, 0, 0.85);
-          text-align: center;
-          font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
-          font-weight: 600;
         }
+
         & > .description {
           font-size: 15px;
           color: rgba(0, 0, 0, 0.45);
@@ -216,10 +217,12 @@ section {
           margin-top: 10px;
         }
       }
+
       & > .main-content {
         label {
           font-size: 14px;
         }
+
         button.login-button {
           padding: 0 15px;
           font-size: 16px;
@@ -230,6 +233,7 @@ section {
       }
     }
   }
+
   & > .footer {
     width: 100%;
     padding: 0 16px;
@@ -237,18 +241,7 @@ section {
     text-align: center;
     position: fixed;
     bottom: 0;
-    .links {
-      margin-bottom: 8px;
-      font-size: 14px;
-      a {
-        color: rgba(0, 0, 0, 0.45);
-        text-decoration: none;
-        transition: all 0.3s;
-        &:not(:last-child) {
-          margin-right: 40px;
-        }
-      }
-    }
+
     .copyright {
       color: rgba(0, 0, 0, 0.45);
       font-size: 14px;

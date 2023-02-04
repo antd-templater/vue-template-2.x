@@ -14,127 +14,102 @@ Mock.mock(Utils.toRegex(api.getResourceMenuAll), 'post', options => {
   const result = Utils.builder({
     nodes: [
       {
-        activity: 'Y',
-        component: 'PageView',
+        sort: 1000000,
+        path: '',
         icon: 'codepen',
-        isShow: 'Y',
+        title: '系统管理',
+        redirect: '',
         parentId: '0',
-        platformCode: 'web',
+        component: 'PageView',
         resourceId: '27245863256459422',
         resourceName: 'system',
         resourceType: 'm',
-        sort: 1000000,
-        title: '系统管理'
+        hideChildrenInMenu: 'N',
+        hideInMenu: 'N',
+        allowCache: 'Y',
+        activity: 'Y'
       },
       {
-        activity: 'Y',
-        component: 'OrganizeManage',
-        icon: '',
-        isShow: 'Y',
-        parentId: '27245863256459422',
+        sort: 1000100,
         path: '/system/OrganizeManage',
-        platformCode: 'web',
+        icon: '',
+        title: '组织管理',
         redirect: '',
+        parentId: '27245863256459422',
+        component: 'OrganizeManage',
         resourceId: '1127282136000102507',
         resourceName: 'OrganizeManage',
         resourceType: 'm',
-        sort: 1000100,
-        title: '组织管理'
+        hideChildrenInMenu: 'N',
+        hideInMenu: 'N',
+        allowCache: 'Y',
+        activity: 'Y'
       },
       {
-        activity: 'Y',
-        component: 'ResourceManage',
-        icon: '',
-        isShow: 'Y',
-        parentId: '27245863256459422',
+        sort: 1000200,
         path: '/system/ResourceManage',
-        platformCode: 'web',
+        icon: '',
+        title: '资源管理',
         redirect: '',
+        parentId: '27245863256459422',
+        component: 'ResourceManage',
         resourceId: '27245863256459445',
         resourceName: 'ResourceManage',
         resourceType: 'm',
-        sort: 1000200,
-        title: '资源管理'
+        hideChildrenInMenu: 'N',
+        hideInMenu: 'N',
+        allowCache: 'Y',
+        activity: 'Y'
       },
       {
-        activity: 'Y',
-        component: 'RoleManage',
-        icon: '',
-        isShow: 'Y',
-        parentId: '27245863256459422',
+        sort: 1000300,
         path: '/system/RoleManage',
-        platformCode: 'web',
+        icon: '',
+        title: '角色管理',
         redirect: '',
+        parentId: '27245863256459422',
+        component: 'RoleManage',
         resourceId: '27245863256459495',
         resourceName: 'RoleManage',
         resourceType: 'm',
-        sort: 1000300,
-        title: '角色管理'
+        hideChildrenInMenu: 'N',
+        hideInMenu: 'N',
+        allowCache: 'Y',
+        activity: 'Y'
       },
       {
-        activity: 'Y',
-        component: 'PersonManage',
-        icon: '',
-        isShow: 'Y',
-        parentId: '27245863256459422',
-        path: '/system/PersonManage',
-        platformCode: 'web',
-        redirect: '',
-        resourceId: '1127282136000102555',
-        resourceName: 'PersonManage',
-        resourceType: 'm',
         sort: 1000400,
-        title: '员工管理'
-      },
-      {
-        activity: 'Y',
-        component: 'UserManage',
-        icon: '',
-        isShow: 'Y',
-        parentId: '27245863256459422',
         path: '/system/UserManage',
-        platformCode: 'web',
+        icon: '',
+        title: '用户管理',
         redirect: '',
+        parentId: '27245863256459422',
+        component: 'UserManage',
         resourceId: '1127282136000102579',
         resourceName: 'UserManage',
         resourceType: 'm',
-        sort: 1000500,
-        title: '用户管理'
-      },
-      {
-        activity: 'Y',
-        component: 'DictionaryManage',
-        icon: '',
-        isShow: 'Y',
-        parentId: '27245863256459422',
-        path: '/system/DictionaryManage',
-        platformCode: 'web',
-        redirect: '',
-        resourceId: '1127282136000102608',
-        resourceName: 'DictionaryManage',
-        resourceType: 'm',
-        sort: 1000600,
-        title: '字典管理'
+        hideChildrenInMenu: 'N',
+        hideInMenu: 'N',
+        allowCache: 'Y',
+        activity: 'Y'
       }
     ],
     treeNodes: [
       {
+        label: '根目录',
+        value: '0',
         children: [
           {
+            label: '系统管理',
+            value: '27245863256459422',
             children: [
               { children: [], label: '组织管理', value: '1127282136000102507' },
               { children: [], label: '资源管理', value: '27245863256459445' },
               { children: [], label: '角色管理', value: '27245863256459495' },
-              { children: [], label: '员工管理', value: '1127282136000102555' },
-              { children: [], label: '用户管理', value: '1127282136000102579' },
-              { children: [], label: '字典管理', value: '1127282136000102608' }
-            ],
-            label: '系统管理',
-            value: '27245863256459422'
+              { children: [], label: '用户管理', value: '1127282136000102579' }
+            ]
           }
-        ],
-        label: '根目录',
-        value: '0'
+        ]
       }
     ]
   })

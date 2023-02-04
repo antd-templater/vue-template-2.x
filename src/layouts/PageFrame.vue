@@ -56,11 +56,13 @@ export default {
 .page-frame-container {
   flex: 1 0 auto;
   flex-flow: column nowrap;
+  position: relative;
   display: flex;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+
   .wrapper {
     flex: 1 0 auto;
     flex-flow: column nowrap;
@@ -80,6 +82,7 @@ export default {
       padding: 0;
     }
   }
+
   iframe {
     flex: 1 0 auto;
     flex-flow: column nowrap;

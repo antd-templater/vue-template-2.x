@@ -127,8 +127,7 @@ export default {
         const params = requestBuilder(
           '',
           {
-            resourceType: 'm',
-            platformCode: 'web'
+            resourceType: 'm'
           },
           null,
           null

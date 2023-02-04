@@ -311,7 +311,7 @@ export default {
         // 联动查询
         this.$emit('queryTable', {
           orgId: options.selectedNode.isOrg === 'Y' ? options.selectedNode.value : '',
-          departmentSysId: options.selectedNode.isOrg === 'N' ? options.selectedNode.value : ''
+          deptId: options.selectedNode.isOrg === 'N' ? options.selectedNode.value : ''
         })
       })
     },

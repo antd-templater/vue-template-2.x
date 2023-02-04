@@ -18,10 +18,6 @@
           <span class="name">父级菜单ID:</span>
           <span class="value">{{ record.parentId }}</span>
         </div>
-        <div class="readonly-item">
-          <span class="name">所属平台类型:</span>
-          <span class="value">{{ record.platformCode }}</span>
-        </div>
       </div>
 
       <a-divider :dashed="true"/>
@@ -114,10 +110,9 @@ export default {
           this.action = 'insert'
           this.record = Object.assign(
             {
-              isShow: 'Y',
-              isNoCache: 'N',
-              isHideChildren: 'N',
-              platformCode: 'web',
+              allowCache: 'Y',
+              hideInMenu: 'N',
+              hideChildrenInMenu: 'N',
               resourceType: 'm',
               activity: 'Y'
             },
@@ -132,10 +127,9 @@ export default {
           this.action = 'update'
           this.record = Object.assign(
             {
-              isShow: 'Y',
-              isNoCache: 'N',
-              isHideChildren: 'N',
-              platformCode: 'web',
+              allowCache: 'Y',
+              hideInMenu: 'N',
+              hideChildrenInMenu: 'N',
               resourceType: 'm',
               activity: 'Y'
             },

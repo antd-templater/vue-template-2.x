@@ -12,8 +12,6 @@ export const ORG_NAME = 'ORG_NAME'
 export const DEPT_ID = 'DEPT_ID'
 export const DEPT_NAME = 'DEPT_NAME'
 
-export const PERSON_ID = 'PERSON_ID'
-export const PERSON_NAME = 'PERSON_NAME'
-
 export const OPERATOR = 'OPERATOR'
+export const USER_NAME = 'USER_NAME'
 export const DATA_FLAG = 'DATA_FLAG'

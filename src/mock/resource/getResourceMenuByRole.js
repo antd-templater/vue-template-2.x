@@ -14,22 +14,20 @@ Mock.mock(Utils.toRegex(api.getResourceMenuByRole), 'post', options => {
   const result = Utils.builder({
     treeNodes: [
       {
+        label: '根目录',
+        value: '0',
         children: [
           {
+            label: '系统管理',
+            value: '27245863256459422',
             children: [
               { children: [], label: '组织管理', value: '1127282136000102507' },
               { children: [], label: '资源管理', value: '27245863256459445' },
               { children: [], label: '角色管理', value: '27245863256459495' },
-              { children: [], label: '员工管理', value: '1127282136000102555' },
-              { children: [], label: '用户管理', value: '1127282136000102579' },
-              { children: [], label: '字典管理', value: '1127282136000102608' }
-            ],
-            label: '系统管理',
-            value: '27245863256459422'
+              { children: [], label: '用户管理', value: '1127282136000102579' }
+            ]
           }
-        ],
-        label: '根目录',
-        value: '0'
+        ]
       }
     ],
     treeSelect: [
@@ -37,9 +35,7 @@ Mock.mock(Utils.toRegex(api.getResourceMenuByRole), 'post', options => {
       '1127282136000102507',
       '27245863256459445',
       '27245863256459495',
-      '1127282136000102555',
-      '1127282136000102579',
-      '1127282136000102608'
+      '1127282136000102579'
     ]
   })
 

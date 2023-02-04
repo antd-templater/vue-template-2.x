@@ -7,8 +7,7 @@ export default {
   computed: {
     ...mapGetters([
       'rememberMe',
-      'personName',
-      'nickname',
+      'nickName',
       'userInfo',
       'avatar',
       'roles'

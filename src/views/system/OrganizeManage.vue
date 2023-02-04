@@ -173,7 +173,7 @@ export default {
      */
     doTableQuery (options) {
       Object.assign(this.$refs.table.queryParam, options)
-      if (this.$refs.table.queryParam.orgId || this.$refs.table.queryParam.departmentSysId) {
+      if (this.$refs.table.queryParam.orgId || this.$refs.table.queryParam.deptId) {
         this.$refs.table.doTableQuery()
       }
     },

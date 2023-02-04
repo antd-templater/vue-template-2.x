@@ -50,7 +50,7 @@ export default {
       default: function () {
         return {
           orgTree: [],
-          departmentSysId: [],
+          deptId: [],
           roleId: []
         }
       }

@@ -42,13 +42,12 @@ const listToTree = (list, tree, parent) => {
 export const treeToRoute = (routers, parent = {}, components = {}) => {
   return routers.map(item => {
     const {
+      icon,
       title,
-      show,
-      noCache,
-      hideChildren,
-      hiddenHeaderContent,
       target,
-      icon
+      allowCache,
+      hideInMenu,
+      hideChildrenInMenu
     } = item.meta || {}
     const isNotIframeView = item.component !== 'PageFrame'
     const match = isNotIframeView ? 'path' : 'external'
@@ -68,19 +67,16 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
       // 路由meta
       meta: {
         icon,
-        show,
-        match,
         title,
+        match,
         target,
         groupId: (parent.meta || {}).groupId || item.id,
-        noCache: (parent.meta || {}).noCache === true || noCache === true,
         external: (!isNotIframeView && item.path) || '',
         permission: [item.name || item.key || ''],
         componentName: item.component || item.name || item.key || '',
-        hiddenHeaderContent:
-          hiddenHeaderContent !== undefined
-            ? hiddenHeaderContent !== false
-            : (parent.meta || {}).hiddenHeaderContent !== false
+        allowCache: (parent.meta || {}).allowCache !== false || allowCache !== false,
+        hideChildrenInMenu,
+        hideInMenu
       }
     }
 
@@ -90,8 +86,14 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
     }
 
     // 是否设置了隐藏菜单
-    if (show === false) {
+    if (hideInMenu === true) {
       currentRouter.hidden = true
+      currentRouter.hideChildrenInMenu = true
+    }
+
+    // 是否设置隐藏子菜单
+    if (hideChildrenInMenu === true) {
+      currentRouter.hideChildrenInMenu = true
     }
 
     // PageFrame 使用别名
@@ -119,11 +121,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
     }
 
     // 是否设置了隐藏子菜单
-    if (
-      hideChildren === true ||
-      !currentRouter.children ||
-      !currentRouter.children.some(route => route.meta.show !== false)
-    ) {
+    if (!currentRouter.hideChildrenInMenu && !currentRouter.children?.some(route => !route.meta || !route.meta.hideInMenu)) {
       currentRouter.hideChildrenInMenu = true
     }
 

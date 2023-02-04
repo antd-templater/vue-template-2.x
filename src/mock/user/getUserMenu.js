@@ -13,102 +13,79 @@ Mock.mock(Utils.toRegex(api.getUserMenu), 'post', options => {
   // 响应数据
   const result = Utils.builder([
     {
-      meta: {
-        icon: 'codepen',
-        show: true,
-        title: '系统管理'
-      },
       id: '27245863256459422',
       name: 'system',
       path: '',
-      component: 'PageView',
       parentId: '0',
+      component: 'PageView',
       redirect: '/system/OrganizeManage',
-      sort: 1000000
+      meta: {
+        icon: 'codepen',
+        title: '系统管理',
+        hideChildrenInMenu: false,
+        hideInMenu: false,
+        allowCache: true
+      }
     },
     {
-      meta: {
-        icon: '',
-        show: true,
-        title: '组织管理'
-      },
       id: '1127282136000102507',
       name: 'OrganizeManage',
       path: '/system/OrganizeManage',
-      component: 'OrganizeManage',
       parentId: '27245863256459422',
+      component: 'OrganizeManage',
       redirect: '',
-      sort: 1000100
+      meta: {
+        title: '组织管理',
+        icon: '',
+        hideChildrenInMenu: false,
+        hideInMenu: false,
+        allowCache: true
+      }
     },
     {
-      meta: {
-        icon: '',
-        show: true,
-        title: '资源管理'
-      },
       id: '27245863256459445',
       name: 'ResourceManage',
       path: '/system/ResourceManage',
-      component: 'ResourceManage',
       parentId: '27245863256459422',
+      component: 'ResourceManage',
       redirect: '',
-      sort: 1000200
+      meta: {
+        title: '资源管理',
+        icon: '',
+        hideChildrenInMenu: false,
+        hideInMenu: false,
+        allowCache: true
+      }
     },
     {
-      meta: {
-        icon: '',
-        show: true,
-        title: '角色管理'
-      },
       id: '27245863256459495',
       name: 'RoleManage',
       path: '/system/RoleManage',
+      parentId: '27245863256459422',
       component: 'RoleManage',
-      parentId: '27245863256459422',
       redirect: '',
-      sort: 1000300
+      meta: {
+        title: '角色管理',
+        icon: '',
+        hideChildrenInMenu: false,
+        hideInMenu: false,
+        allowCache: true
+      }
     },
     {
-      meta: {
-        icon: '',
-        show: true,
-        title: '员工管理'
-      },
-      id: '1127282136000102555',
-      name: 'PersonManage',
-      path: '/system/PersonManage',
-      component: 'PersonManage',
-      parentId: '27245863256459422',
-      redirect: '',
-      sort: 1000400
-    },
-    {
-      meta: {
-        icon: '',
-        show: true,
-        title: '用户管理'
-      },
       id: '1127282136000102579',
       name: 'UserManage',
       path: '/system/UserManage',
+      parentId: '27245863256459422',
       component: 'UserManage',
-      parentId: '27245863256459422',
       redirect: '',
-      sort: 1000500
-    },
-    {
       meta: {
+        title: '用户管理',
         icon: '',
-        show: true,
-        title: '字典管理'
-      },
-      id: '1127282136000102608',
-      name: 'DictionaryManage',
-      path: '/system/DictionaryManage',
-      component: 'DictionaryManage',
-      parentId: '27245863256459422',
-      redirect: '',
-      sort: 1000600
+        hideChildrenInMenu: false,
+        hideInMenu: false,
+        allowCache: true
+      }
     }
   ])
 

@@ -119,7 +119,6 @@ export default {
       // 查询参数
       queryParam: {
         parentId: '',
-        platformCode: 'web',
         resourceType: 's'
       },
 
@@ -186,7 +185,6 @@ export default {
           deepUpdate(
             {
               parentId: '',
-              platformCode: '',
               resourceType: ''
             },
             this.queryParam

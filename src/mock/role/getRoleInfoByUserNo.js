@@ -13,15 +13,11 @@ Mock.mock(Utils.toRegex(api.getRoleInfoByUserNo), 'post', options => {
   // 响应数据
   const result = Utils.builder([
     {
-      activity: 'Y',
-      createBy: 'admin',
-      createDate: 1642073583031,
-      dataFlag: '2',
-      modifyBy: '182588xxx88',
-      modifyDate: 1642468575934,
       orgId: '101.100.131',
       roleId: '27442970747734159',
-      roleName: '系统管理'
+      roleName: '系统管理',
+      dataFlag: '2',
+      activity: 'Y'
     }
   ])
 

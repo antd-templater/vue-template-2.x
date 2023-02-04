@@ -29,16 +29,14 @@ Mock.mock(Utils.toRegex(api.login), 'post', options => {
   // 响应数据
   const result = Utils.builder({
     data: {
-      activity: 'Y',
-      createBy: 'admin',
-      createDate: 1642073941231,
-      id: '11442970747734161',
+      userNo: '182588xxx88',
+      userName: 'admin',
       mobilePhone: '182588xxx88',
-      modifyBy: 'admin',
-      modifyDate: 1642075669198,
       orgId: '101.100.131',
-      personSysId: '11442970747734160',
-      userNo: '182588xxx88'
+      orgName: '北仑网安通信有限公司',
+      deptName: '软件部',
+      deptId: '1126534161135795132',
+      activity: 'Y'
     },
     token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxODI1ODc2NDMyMSIsImV4cCI6MTY0MjQ4NTQwNX0.gFrCkMY5OlheC7sF7elhb8cF2fvkD-dj950xklyI14Q'
   })

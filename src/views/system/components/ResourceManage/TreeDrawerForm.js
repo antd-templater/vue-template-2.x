@@ -108,35 +108,8 @@ export default {
       },
       {
         type: 'ASwitch',
-        slot: 'isNoCache',
-        field: 'isNoCache',
-        label: '是否缓存',
-        decorator: {
-          valuePropName: 'checked'
-        },
-        attrs: {
-          checkedChildren: '开',
-          unCheckedChildren: '关'
-        },
-        transfer: {
-          input (value, { Util }) {
-            if (Util.isBoolean(value)) {
-              return value
-            }
-            if (Util.isString(value)) {
-              return !['Y', 'y'].includes(value)
-            }
-            return true
-          },
-          output (value, { Util }) {
-            return value !== true ? 'Y' : 'N'
-          }
-        }
-      },
-      {
-        type: 'ASwitch',
-        slot: 'isHideChildren',
-        field: 'isHideChildren',
+        slot: 'hideChildrenInMenu',
+        field: 'hideChildrenInMenu',
         label: '隐藏子菜单',
         decorator: {
           valuePropName: 'checked'
@@ -148,15 +121,28 @@ export default {
       },
       {
         type: 'ASwitch',
-        slot: 'isShow',
-        field: 'isShow',
-        label: '是否可见',
+        slot: 'hideInMenu',
+        field: 'hideInMenu',
+        label: '隐藏菜单',
         decorator: {
           valuePropName: 'checked'
         },
         attrs: {
           checkedChildren: '是',
           unCheckedChildren: '否'
+        }
+      },
+      {
+        type: 'ASwitch',
+        slot: 'allowCache',
+        field: 'allowCache',
+        label: '是否缓存',
+        decorator: {
+          valuePropName: 'checked'
+        },
+        attrs: {
+          checkedChildren: '开',
+          unCheckedChildren: '关'
         }
       },
       {

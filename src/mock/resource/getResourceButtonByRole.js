@@ -20,22 +20,18 @@ Mock.mock(Utils.toRegex(api.getResourceButtonByRole), 'post', options => {
       data.push({
         id: '27245863256459422',
         actionsOptions: [],
-        checkedAll: false,
-        indeterminate: false,
         selected: []
       })
     }
     if (item.roleId === '27442970747734159' && item.menuId === '1127282136000102507') {
       data.push({
+        id: '1127282136000102507',
         actionsOptions: [
           { label: '新增', value: '1127282136000102508' },
           { label: '删除', value: '1127282136000102509' },
           { label: '修改', value: '1127282136000102510' },
           { label: '查询', value: '1127282136000102511' }
         ],
-        id: '1127282136000102507',
-        checkedAll: false,
-        indeterminate: false,
         selected: [
           '1127282136000102508',
           '1127282136000102509',
@@ -46,27 +42,23 @@ Mock.mock(Utils.toRegex(api.getResourceButtonByRole), 'post', options => {
     }
     if (item.roleId === '27442970747734159' && item.menuId === '27245863256459445') {
       data.push({
+        id: '27245863256459445',
         actionsOptions: [
           { label: '新增', value: '27245863256459447' },
           { label: '删除', value: '27245863256459449' }
         ],
-        id: '27245863256459445',
-        checkedAll: false,
-        indeterminate: false,
         selected: ['27245863256459447', '27245863256459449']
       })
     }
     if (item.roleId === '27442970747734159' && item.menuId === '27245863256459495') {
       data.push({
+        id: '27245863256459495',
         actionsOptions: [
           { label: '新增', value: '27245863256459496' },
           { label: '删除', value: '27245863256459497' },
           { label: '修改', value: '27245863256459498' },
           { label: '查询', value: '27245863256459499' }
         ],
-        id: '27245863256459495',
-        checkedAll: false,
-        indeterminate: false,
         selected: [
           '27245863256459496',
           '27245863256459497',
@@ -75,60 +67,20 @@ Mock.mock(Utils.toRegex(api.getResourceButtonByRole), 'post', options => {
         ]
       })
     }
-    if (item.roleId === '27442970747734159' && item.menuId === '1127282136000102555') {
-      data.push({
-        actionsOptions: [
-          { label: '新增', value: '1127282136000102563' },
-          { label: '删除', value: '1127282136000102564' },
-          { label: '修改', value: '1127282136000102565' },
-          { label: '查询', value: '1127282136000102566' }
-        ],
-        id: '1127282136000102555',
-        checkedAll: false,
-        indeterminate: false,
-        selected: [
-          '1127282136000102563',
-          '1127282136000102564',
-          '1127282136000102565',
-          '1127282136000102566'
-        ]
-      })
-    }
     if (item.roleId === '27442970747734159' && item.menuId === '1127282136000102579') {
       data.push({
+        id: '1127282136000102579',
         actionsOptions: [
           { label: '新增', value: '1127282136000102580' },
           { label: '删除', value: '1127282136000102581' },
           { label: '修改', value: '1127282136000102582' },
           { label: '查询', value: '1127282136000102583' }
         ],
-        id: '1127282136000102579',
-        checkedAll: false,
-        indeterminate: false,
         selected: [
           '1127282136000102580',
           '1127282136000102581',
           '1127282136000102582',
           '1127282136000102583'
-        ]
-      })
-    }
-    if (item.roleId === '27442970747734159' && item.menuId === '1127282136000102608') {
-      data.push({
-        actionsOptions: [
-          { label: '新增', value: '1127282136000102609' },
-          { label: '删除', value: '1127282136000102610' },
-          { label: '修改', value: '1127282136000102611' },
-          { label: '查询', value: '1127282136000102612' }
-        ],
-        id: '1127282136000102608',
-        checkedAll: false,
-        indeterminate: false,
-        selected: [
-          '1127282136000102609',
-          '1127282136000102610',
-          '1127282136000102611',
-          '1127282136000102612'
         ]
       })
     }

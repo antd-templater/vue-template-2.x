@@ -16,11 +16,11 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
     case '0': {
       result = Utils.builder([
         {
-          isLeaf: false,
-          isOrg: 'Y',
           key: '1',
-          orgShortName: '集团公司',
-          title: '浙大远疆投资集团有限公司'
+          isOrg: 'Y',
+          isLeaf: false,
+          title: '浙大远疆投资集团有限公司',
+          orgShortName: '集团公司'
         }
       ])
       break
@@ -28,11 +28,11 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
     case '1': {
       result = Utils.builder([
         {
-          isLeaf: false,
-          isOrg: 'Y',
           key: '101.100',
-          orgShortName: '港运公司',
-          title: '港运信息有限公司'
+          isOrg: 'Y',
+          isLeaf: false,
+          title: '港运信息有限公司',
+          orgShortName: '港运公司'
         }
       ])
       break
@@ -40,18 +40,18 @@ Mock.mock(Utils.toRegex(api.getOrganizeInfoTree), 'post', options => {
     case '101.100': {
       result = Utils.builder([
         {
-          isLeaf: true,
-          isOrg: 'Y',
           key: '101.100.131',
-          orgShortName: '北仑网安',
-          title: '北仑网安通信有限公司'
+          isOrg: 'Y',
+          isLeaf: true,
+          title: '北仑网安通信有限公司',
+          orgShortName: '北仑网安'
         },
         {
-          isLeaf: true,
-          isOrg: 'Y',
           key: '101.100.138',
-          orgShortName: '宁财港务',
-          title: '宁财港务有限公司'
+          isOrg: 'Y',
+          isLeaf: true,
+          title: '宁财港务有限公司',
+          orgShortName: '宁财港务'
         }
       ])
       break

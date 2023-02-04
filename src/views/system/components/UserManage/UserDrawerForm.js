@@ -48,20 +48,8 @@ export default {
       },
       {
         type: 'AInput',
-        slot: 'personNum',
-        field: 'personNum',
-        label: '用户编码',
-        decorator: {
-          rules: [{ required: true, message: '请输入用户编码' }]
-        },
-        attrs: {
-          placeholder: '请输入用户编码'
-        }
-      },
-      {
-        type: 'AInput',
-        slot: 'personName',
-        field: 'personName',
+        slot: 'userName',
+        field: 'userName',
         label: '用户姓名',
         decorator: {
           rules: [{ required: true, message: '请输入用户姓名' }]
@@ -116,8 +104,8 @@ export default {
       },
       {
         type: 'ASelect',
-        slot: 'departmentSysId',
-        field: 'departmentSysId',
+        slot: 'deptId',
+        field: 'deptId',
         label: '所属部门',
         decorator: {},
         attrs: {
@@ -233,17 +221,17 @@ export default {
             Object.assign(option, {
               handleEvents: {
                 change (value) {
-                  const departmentSysId = that.getFieldValue('departmentSysId')
-                  const departmentSysIdArr =
-                    that.options.departmentSysId.selectOptions
+                  const deptId = that.getFieldValue('deptId')
+                  const deptIdArr =
+                    that.options.deptId.selectOptions
                   if (
-                    !departmentSysIdArr.some(
+                    !deptIdArr.some(
                       item =>
-                        departmentSysId === item.value &&
+                        deptId === item.value &&
                         value === item.parentId
                     )
                   ) {
-                    that.setFieldsValue({ departmentSysId: '' })
+                    that.setFieldsValue({ deptId: '' })
                   }
                 }
               },
@@ -252,7 +240,7 @@ export default {
           }
 
           // 所属部门
-          if (group.field === 'departmentSysId') {
+          if (group.field === 'deptId') {
             Object.assign(option, {
               selectOptionsRender (options, { Util, form }) {
                 return options.filter(opt => {
@@ -260,7 +248,7 @@ export default {
                   return orgId && opt.parentId === orgId
                 })
               },
-              selectOptions: this.queryOptions.departmentSysId
+              selectOptions: this.queryOptions.deptId
             })
           }
 
