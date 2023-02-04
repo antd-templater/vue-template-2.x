@@ -37,12 +37,18 @@ export default {
 
     if (isKeepAlive) {
       return (
-        <keep-alive include={cachedTags}>
-          <router-view key={key} />
-        </keep-alive>
+        <div class="route-view-container">
+          <keep-alive include={cachedTags}>
+            <router-view key={key} />
+          </keep-alive>
+        </div>
       )
     }
-    return <router-view />
+    return (
+      <div class="route-view-container">
+        <router-view />
+      </div>
+    )
   }
 }
 </script>
