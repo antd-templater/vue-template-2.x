@@ -208,13 +208,13 @@ export default {
     handleModalConfirm () {
       this.form.validateFields(err => {
         if (!err) {
-          const param = {
+          const params = {
             userNo: Vue.ls.get(OPERATOR),
             password: this.form.getFieldValue('password'),
             newPassword: this.form.getFieldValue('newPassword')
           }
           authApi
-            .modifyPassword({ param })
+            .modifyPassword(params)
             .then(res => {
               if (res.code !== '0000') {
                 if (res.message) {
