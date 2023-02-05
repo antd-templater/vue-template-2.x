@@ -47,7 +47,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
       target,
       allowCache,
       hideInMenu,
-      hideChildrenInMenu
+      hideChildInMenu
     } = item.meta || {}
     const isNotIframeView = item.component !== 'PageFrame'
     const match = isNotIframeView ? 'path' : 'external'
@@ -75,7 +75,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
         permission: [item.name || item.key || ''],
         componentName: item.component || item.name || item.key || '',
         allowCache: (parent.meta || {}).allowCache !== false || allowCache !== false,
-        hideChildrenInMenu,
+        hideChildInMenu,
         hideInMenu
       }
     }
@@ -92,7 +92,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
     }
 
     // 是否设置隐藏子菜单
-    if (hideChildrenInMenu === true) {
+    if (hideChildInMenu === true) {
       currentRouter.hideChildrenInMenu = true
     }
 

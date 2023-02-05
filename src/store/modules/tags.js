@@ -62,7 +62,7 @@ export default {
           if (cachedTags.includes(name)) {
             continue
           }
-          if (meta.noCache !== true) {
+          if (meta.allowCache !== false) {
             cachedTags.push(name)
           }
         }

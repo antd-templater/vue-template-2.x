@@ -24,7 +24,7 @@ Mock.mock(Utils.toRegex(api.getResourceMenuAll), 'post', options => {
         resourceId: '27245863256459422',
         resourceName: 'system',
         resourceType: 'm',
-        hideChildrenInMenu: 'N',
+        hideChildInMenu: 'N',
         hideInMenu: 'N',
         allowCache: 'Y',
         activity: 'Y'
@@ -40,7 +40,7 @@ Mock.mock(Utils.toRegex(api.getResourceMenuAll), 'post', options => {
         resourceId: '1127282136000102507',
         resourceName: 'OrganizeManage',
         resourceType: 'm',
-        hideChildrenInMenu: 'N',
+        hideChildInMenu: 'N',
         hideInMenu: 'N',
         allowCache: 'Y',
         activity: 'Y'
@@ -56,7 +56,7 @@ Mock.mock(Utils.toRegex(api.getResourceMenuAll), 'post', options => {
         resourceId: '27245863256459445',
         resourceName: 'ResourceManage',
         resourceType: 'm',
-        hideChildrenInMenu: 'N',
+        hideChildInMenu: 'N',
         hideInMenu: 'N',
         allowCache: 'Y',
         activity: 'Y'
@@ -72,7 +72,7 @@ Mock.mock(Utils.toRegex(api.getResourceMenuAll), 'post', options => {
         resourceId: '27245863256459495',
         resourceName: 'RoleManage',
         resourceType: 'm',
-        hideChildrenInMenu: 'N',
+        hideChildInMenu: 'N',
         hideInMenu: 'N',
         allowCache: 'Y',
         activity: 'Y'
@@ -88,7 +88,7 @@ Mock.mock(Utils.toRegex(api.getResourceMenuAll), 'post', options => {
         resourceId: '1127282136000102579',
         resourceName: 'UserManage',
         resourceType: 'm',
-        hideChildrenInMenu: 'N',
+        hideChildInMenu: 'N',
         hideInMenu: 'N',
         allowCache: 'Y',
         activity: 'Y'

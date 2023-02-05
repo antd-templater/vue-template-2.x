@@ -22,7 +22,7 @@ Mock.mock(Utils.toRegex(api.getUserMenu), 'post', options => {
       meta: {
         icon: 'codepen',
         title: '系统管理',
-        hideChildrenInMenu: false,
+        hideChildInMenu: false,
         hideInMenu: false,
         allowCache: true
       }
@@ -37,7 +37,7 @@ Mock.mock(Utils.toRegex(api.getUserMenu), 'post', options => {
       meta: {
         title: '组织管理',
         icon: '',
-        hideChildrenInMenu: false,
+        hideChildInMenu: false,
         hideInMenu: false,
         allowCache: true
       }
@@ -52,7 +52,7 @@ Mock.mock(Utils.toRegex(api.getUserMenu), 'post', options => {
       meta: {
         title: '资源管理',
         icon: '',
-        hideChildrenInMenu: false,
+        hideChildInMenu: false,
         hideInMenu: false,
         allowCache: true
       }
@@ -67,7 +67,7 @@ Mock.mock(Utils.toRegex(api.getUserMenu), 'post', options => {
       meta: {
         title: '角色管理',
         icon: '',
-        hideChildrenInMenu: false,
+        hideChildInMenu: false,
         hideInMenu: false,
         allowCache: true
       }
@@ -82,7 +82,7 @@ Mock.mock(Utils.toRegex(api.getUserMenu), 'post', options => {
       meta: {
         title: '用户管理',
         icon: '',
-        hideChildrenInMenu: false,
+        hideChildInMenu: false,
         hideInMenu: false,
         allowCache: true
       }

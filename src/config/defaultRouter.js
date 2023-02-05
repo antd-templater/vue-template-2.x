@@ -35,16 +35,18 @@ export default {
           match: 'external',
           external: '',
           componentName: 'ExternalLink',
-          hiddenHeaderContent: true,
-          noCache: false
+          hideChildInMenu: false,
+          hideInMenu: false,
+          allowCache: true
         }
       }
     ],
     meta: {
       title: '外部链接',
       componentName: 'External',
-      hiddenHeaderContent: true,
-      noCache: false
+      hideChildInMenu: false,
+      hideInMenu: false,
+      allowCache: true
     },
     hidden: true
   },

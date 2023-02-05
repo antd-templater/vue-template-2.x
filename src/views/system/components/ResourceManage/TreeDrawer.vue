@@ -112,7 +112,7 @@ export default {
             {
               allowCache: 'Y',
               hideInMenu: 'N',
-              hideChildrenInMenu: 'N',
+              hideChildInMenu: 'N',
               resourceType: 'm',
               activity: 'Y'
             },
@@ -129,7 +129,7 @@ export default {
             {
               allowCache: 'Y',
               hideInMenu: 'N',
-              hideChildrenInMenu: 'N',
+              hideChildInMenu: 'N',
               resourceType: 'm',
               activity: 'Y'
             },

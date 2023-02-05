@@ -108,8 +108,8 @@ export default {
       },
       {
         type: 'ASwitch',
-        slot: 'hideChildrenInMenu',
-        field: 'hideChildrenInMenu',
+        slot: 'hideChildInMenu',
+        field: 'hideChildInMenu',
         label: '隐藏子菜单',
         decorator: {
           valuePropName: 'checked'
