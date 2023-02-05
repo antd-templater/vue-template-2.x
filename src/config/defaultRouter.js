@@ -35,8 +35,8 @@ export default {
           match: 'external',
           external: '',
           componentName: 'ExternalLink',
-          hideChildInMenu: false,
-          hideInMenu: false,
+          hideChildInMenu: true,
+          hideInMenu: true,
           allowCache: true
         }
       }
@@ -44,8 +44,8 @@ export default {
     meta: {
       title: '外部链接',
       componentName: 'External',
-      hideChildInMenu: false,
-      hideInMenu: false,
+      hideChildInMenu: true,
+      hideInMenu: true,
       allowCache: true
     },
     hidden: true
