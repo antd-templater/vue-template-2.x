@@ -49,6 +49,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
       hideInMenu,
       hideChildInMenu
     } = item.meta || {}
+    const parentAllowCache = (parent.meta || {}).allowCache
     const isNotIframeView = item.component !== 'PageFrame'
     const match = isNotIframeView ? 'path' : 'external'
     const currentRouter = {
@@ -74,7 +75,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
         external: (!isNotIframeView && item.path) || '',
         permission: [item.name || item.key || ''],
         componentName: item.component || item.name || item.key || '',
-        allowCache: (parent.meta || {}).allowCache !== false || allowCache !== false,
+        allowCache: (parentAllowCache !== false && parentAllowCache !== 'N') || (allowCache !== false && allowCache !== 'N'),
         hideChildInMenu,
         hideInMenu
       }
@@ -86,13 +87,13 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
     }
 
     // 是否设置了隐藏菜单
-    if (hideInMenu === true) {
+    if (hideInMenu === true || hideInMenu === 'Y') {
       currentRouter.hidden = true
       currentRouter.hideChildrenInMenu = true
     }
 
     // 是否设置隐藏子菜单
-    if (hideChildInMenu === true) {
+    if (hideChildInMenu === true || hideChildInMenu === 'Y') {
       currentRouter.hideChildrenInMenu = true
     }
 
@@ -121,7 +122,7 @@ export const treeToRoute = (routers, parent = {}, components = {}) => {
     }
 
     // 是否设置了隐藏子菜单
-    if (!currentRouter.hideChildrenInMenu && !currentRouter.children?.some(route => !route.meta || !route.meta.hideInMenu)) {
+    if (!currentRouter.hideChildrenInMenu && currentRouter.children?.every(route => route.meta && (route.meta.hideInMenu === true || route.meta.hideInMenu === 'Y'))) {
       currentRouter.hideChildrenInMenu = true
     }
 
