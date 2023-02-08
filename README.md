@@ -10,7 +10,7 @@
 - Preset Router - 100%
 - Preset Plugin - 100%
 - Basic Layout - 100%
-- Pinia Store - 100%
+- Vuex Store - 100%
 - Mock Data - 100%
 - Code lint - 100%
 - Git lint - 100%
