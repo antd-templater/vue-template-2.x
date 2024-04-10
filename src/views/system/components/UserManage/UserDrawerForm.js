@@ -1,4 +1,4 @@
-import { validator, extender } from '@antd-templater/antd-template-lib2.x/SForm/Helper'
+import { validator, extender } from '@antd-templater/library-2.x/SForm/Helper'
 
 /**
  * @description 用户管理 - 用户表单数据

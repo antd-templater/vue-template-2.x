@@ -1,4 +1,4 @@
-import { extender } from '@antd-templater/antd-template-lib2.x/SForm/Helper'
+import { extender } from '@antd-templater/library-2.x/SForm/Helper'
 
 /**
  * @description 组织管理 - 表单数据

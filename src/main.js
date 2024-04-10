@@ -1,6 +1,6 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import '@antd-templater/antd-template-lib2.x'
+import '@antd-templater/library-2.x'
 
 import bootstrap from './core'
 import router from './router'
